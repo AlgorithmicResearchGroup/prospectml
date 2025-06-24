@@ -1,15 +1,6 @@
-# 🤖 ProspectML - AI Coding Assistant
+# 🤖 ProspectML - AI Engineer Coding Assistant
 
 Deploy your own AI-powered coding assistant on DigitalOcean Kubernetes in minutes!
-
-## 🚀 What is ProspectML?
-
-ProspectML is an AI coding assistant that can:
-- ✨ Write complete applications from scratch
-- 🐛 Debug and fix code issues
-- 🔧 Refactor and improve existing code
-- 📚 Explain complex code concepts
-- 🎯 Complete coding challenges and tasks
 
 ## 📋 Prerequisites
 
@@ -26,13 +17,14 @@ Before you start, you'll need:
 3. **An Anthropic API Key**
    - Get one free at [console.anthropic.com](https://console.anthropic.com/api)
    - This powers the AI brain of your coding assistant
+   - You can use any other API that supports the OpenAI API format, such as OpenAI, Gemini, or open source models like Llama.
 
 ## 🎯 Quick Start
 
 Just run this single command:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/AlgorithmicResearchGroup/Coding-Agent-For-Deployment/master/public_deploy/deploy-to-digitalocean.sh | bash
+curl -sSL https://raw.githubusercontent.com/AlgorithmicResearchGroup/prospectml_deploy/master/public_deploy/deploy-to-digitalocean.sh | bash
 ```
 
 That's it! The script will:
@@ -45,12 +37,7 @@ That's it! The script will:
 
 If you prefer to see what you're running first:
 
-1. Download the script:
-```bash
-wget https://raw.githubusercontent.com/AlgorithmicResearchGroup/Coding-Agent-For-Deployment/master/public_deploy/deploy-to-digitalocean.sh
-```
-
-2. Make it executable:
+1. Ensure the script is executable:
 ```bash
 chmod +x deploy-to-digitalocean.sh
 ```
@@ -105,21 +92,10 @@ kubectl delete namespace prospectml
 
 ## 🤝 Support
 
-- 📚 Documentation: [GitHub Wiki](https://github.com/AlgorithmicResearchGroup/Coding-Agent-For-Deployment/wiki)
-- 🐛 Issues: [GitHub Issues](https://github.com/AlgorithmicResearchGroup/Coding-Agent-For-Deployment/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/AlgorithmicResearchGroup/Coding-Agent-For-Deployment/discussions)
-
-## 🔒 Security
-
-- Your API keys are stored securely in Kubernetes secrets
-- The AI agent runs in an isolated container
-- All code is Cython-compiled for protection
-- PostgreSQL passwords are randomly generated
-
-## 📜 License
-
-ProspectML is provided as-is for personal and commercial use.
+- 📚 Documentation: [GitHub Wiki](https://github.com/AlgorithmicResearchGroup/prospectml_deploy/wiki)
+- 🐛 Issues: [GitHub Issues](https://github.com/AlgorithmicResearchGroup/prospectml_deploy/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/AlgorithmicResearchGroup/prospectml_deploy/discussions)
 
 ---
 
-Made with ❤️ by the Algorithmic Research Group
+Made with ❤️ by Algorithmic Research Group

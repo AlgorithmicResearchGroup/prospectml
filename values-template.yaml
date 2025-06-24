@@ -1,0 +1,83 @@
+# ProspectML Configuration Template for DigitalOcean
+# 
+# This file contains the configuration for your ProspectML deployment.
+# The deploy script will automatically fill in the required values.
+#
+# For manual installation, replace the following:
+# - YOUR_API_KEY_HERE: Your Anthropic API key from https://console.anthropic.com/api
+# - YOUR_SECURE_PASSWORD_HERE: A strong password for the database
+
+# Docker image settings
+image:
+  repository: algorithmicresearch/prospectml
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+# Network settings - LoadBalancer gives you a public IP
+service:
+  type: LoadBalancer
+  port: 80
+
+# Database settings
+postgresql:
+  enabled: true
+  auth:
+    username: prospectml
+    password: "YOUR_SECURE_PASSWORD_HERE"  # Change this!
+    database: prospectml
+  primary:
+    persistence:
+      enabled: true
+      size: 10Gi  # Database storage size
+
+# Storage settings - disabled due to DigitalOcean limitations
+# If you need persistent file storage, consider using Spaces (S3-compatible)
+storage:
+  outputs:
+    enabled: false
+  sharedTmp:
+    enabled: false
+  data:
+    enabled: false
+
+# Resource limits - adjust based on your node sizes
+resources:
+  requests:
+    memory: "2Gi"    # Minimum memory needed
+    cpu: "1"         # Minimum CPU needed
+  limits:
+    memory: "4Gi"    # Maximum memory allowed
+    cpu: "2"         # Maximum CPU allowed
+
+# AI Configuration - REQUIRED
+aiProvider:
+  anthropic:
+    apiKey: "YOUR_API_KEY_HERE"  # Get from https://console.anthropic.com/api
+
+# Agent settings - controls AI code generation
+agent:
+  maxConcurrentRuns: 2  # How many agents can run at once
+  defaultModel: "claude-3-5-sonnet-20241022"  # AI model to use
+  defaultMaxIterations: 500  # Max steps per task
+  resources:
+    requests:
+      memory: "4Gi"
+      cpu: "2"
+    limits:
+      memory: "8Gi"
+      cpu: "4"
+
+# Optional: Enable HTTPS with your own domain
+# Requires installing cert-manager first
+ingress:
+  enabled: false
+  className: nginx
+  # hosts:
+  #   - host: ai-coder.yourdomain.com
+  #     paths:
+  #       - path: /
+  #         pathType: Prefix
+  # tls:
+  #   - secretName: prospectml-tls
+  #     hosts:
+  #       - ai-coder.yourdomain.com

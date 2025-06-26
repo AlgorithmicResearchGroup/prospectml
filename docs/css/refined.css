@@ -1,0 +1,250 @@
+/* Refined Overrides - Toned down but still cool */
+
+/* Keep the original color palette but reduce intensity */
+:root {
+    /* Keep all original colors */
+    --accent-primary: #60AFC7;
+    --accent-secondary: #9B60AA;
+    --accent-coral: #FE7E57;
+    --accent-success: #7FE57E;
+    --accent-error: #E65C5C;
+    
+    /* Slightly lighter backgrounds for better readability */
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #141414;
+    --bg-tertiary: #1a1a1a;
+    --bg-quaternary: #1f1f1f;
+    
+    /* Original text colors */
+    --text-primary: #E5E7EB;
+    --text-secondary: #B8C0C8;
+    --text-dim: #6B7280;
+    
+    /* Softer borders */
+    --border-color: rgba(64, 71, 73, 0.4);
+}
+
+/* Keep Orbitron but make it less aggressive */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.section-title,
+.nav-title {
+    text-transform: none; /* Remove all caps */
+    letter-spacing: 0.5px; /* Reduce letter spacing */
+}
+
+/* Tone down the neon glow effects */
+.gradient-text {
+    filter: drop-shadow(0 0 10px rgba(96, 175, 199, 0.3)); /* Reduced from 20px to 10px */
+}
+
+/* Soften text shadows throughout */
+.stat-number,
+.amount {
+    text-shadow: 0 0 10px rgba(96, 175, 199, 0.2); /* Reduced intensity */
+}
+
+/* Navigation - keep cool but cleaner */
+.landing-nav {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Buttons - keep gradient but soften */
+.btn-hero-primary,
+.btn-hero-secondary,
+.btn-nav-primary,
+.btn-pricing,
+.btn-primary {
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.btn-hero-primary:hover,
+.btn-nav-primary:hover,
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(96, 175, 199, 0.3); /* Softer shadow */
+}
+
+/* Cards - reduce hover effects */
+.feature-card:hover,
+.industry-card:hover,
+.pricing-card:hover,
+.step:hover {
+    transform: translateY(-5px); /* Reduced from -10px */
+    box-shadow: 0 15px 30px rgba(96, 175, 199, 0.15); /* Softer shadow */
+}
+
+/* Hero section - keep cool but cleaner */
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Stats - reduce glow */
+.stat-number {
+    filter: drop-shadow(0 0 10px currentColor); /* Reduced from 20px */
+}
+
+/* Feature icons - subtle glow */
+.feature-icon,
+.industry-icon,
+.included-icon {
+    filter: drop-shadow(0 0 10px currentColor); /* Reduced from 20px */
+}
+
+/* Pricing cards */
+.pricing-card {
+    transition: all 0.3s ease;
+}
+
+.pricing-card.featured {
+    transform: scale(1.02); /* Reduced from 1.05 */
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Code blocks - keep techy but cleaner */
+.code-block,
+.step-example {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(96, 175, 199, 0.2);
+}
+
+/* FAQ items */
+.faq-item {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(64, 71, 73, 0.3);
+}
+
+.faq-item:hover {
+    border-color: rgba(96, 175, 199, 0.4);
+}
+
+/* Footer */
+.landing-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Reduce animation intensity */
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.5; }
+}
+
+/* Grid background - make it subtler */
+.hero-grid {
+    opacity: 0.03; /* Reduced from 0.05 */
+}
+
+/* Hero glow - softer */
+.hero-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(96, 175, 199, 0.1) 0%, transparent 70%);
+}
+
+/* Remove excessive text transforms */
+.pricing-header h3,
+.feature-card h3,
+.industry-card h3,
+.step h3 {
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+/* Pricing amount - still prominent but cleaner */
+.amount {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem; /* Slightly smaller */
+    font-weight: 800;
+}
+
+/* Contact and payment methods */
+.contact-method,
+.payment-method {
+    transition: all 0.2s ease;
+}
+
+.contact-method:hover,
+.payment-method:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-primary);
+}
+
+/* Enterprise card */
+.enterprise-card {
+    border-color: rgba(155, 96, 170, 0.4);
+}
+
+.enterprise-card h3 {
+    text-transform: none;
+}
+
+/* Purchase cards */
+.purchase-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purchase-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(96, 175, 199, 0.1);
+}
+
+/* Badges */
+.pricing-badge {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Form elements if any */
+input, textarea, select {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(96, 175, 199, 0.2);
+}
+
+/* Links */
+a {
+    transition: color 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .amount {
+        font-size: 2.5rem;
+    }
+}

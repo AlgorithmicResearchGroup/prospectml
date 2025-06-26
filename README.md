@@ -94,7 +94,6 @@ kubectl delete namespace prospectml
 
 - 📚 Documentation: [GitHub Wiki](https://github.com/AlgorithmicResearchGroup/prospectml_deploy/wiki)
 - 🐛 Issues: [GitHub Issues](https://github.com/AlgorithmicResearchGroup/prospectml_deploy/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/AlgorithmicResearchGroup/prospectml_deploy/discussions)
 
 ---
 

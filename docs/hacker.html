@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProspectML - AI Coding Agents for Kubernetes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/refined.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="landing-body">
+    <!-- Navigation -->
+    <nav class="landing-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="pricing.html#purchase" class="btn-nav-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Your data. Your goals.<br>
+                <span class="gradient-text">Our AI trains the model</span>
+            </h1>
+            <h2 class="hero-subtitle">AI Agents That Train Models For You</h2>
+            <p class="hero-description">
+                Stop spending weeks building ML models. Deploy ProspectML on your Kubernetes cluster and let AI agents automatically train, test, and optimize models based on your requirements.
+            </p>
+            <div class="hero-cta">
+                <a href="pricing.html#purchase" class="btn-hero-primary">Start 14-Day Trial</a>
+                <a href="#how-it-works" class="btn-hero-secondary">See How It Works</a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Faster Development</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Your Infrastructure</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Day Free Trial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="feature-section">
+        <div class="container">
+            <h2 class="section-title">Enterprise AI Development Platform</h2>
+            <p class="section-subtitle">Deploy once, accelerate development forever</p>
+            
+            <div class="features-grid">
+                <!-- AI Agents That Code -->
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Agents That Code</h3>
+                    <p class="feature-tagline">Describe what you need, get production code</p>
+                    <p class="feature-description">
+                        Our AI agents understand your requirements and automatically train, test, and optimize models. From data processing to model training, they handle the implementation details.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Natural language to working models</li>
+                        <li>Automatic testing and validation</li>
+                        <li>Continuous optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Kubernetes Native -->
+                <div class="feature-card">
+                    <div class="feature-icon">☸️</div>
+                    <h3>Kubernetes Native</h3>
+                    <p class="feature-tagline">Seamless integration with your K8s cluster</p>
+                    <p class="feature-description">
+                        Built specifically for Kubernetes environments. Deploy with Helm, scale with your cluster, and integrate with your existing DevOps pipeline.
+                    </p>
+                    <ul class="feature-list">
+                        <li>One-command Helm deployment</li>
+                        <li>Auto-scaling based on workload</li>
+                        <li>Works with any K8s provider</li>
+                    </ul>
+                </div>
+
+                <!-- Complete Privacy -->
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Complete Privacy</h3>
+                    <p class="feature-tagline">Your code and data never leaves your cluster</p>
+                    <p class="feature-description">
+                        Everything runs on your infrastructure. Your code, data, and models stay completely within your control. No external dependencies, no data leakage.
+                    </p>
+                    <ul class="feature-list">
+                        <li>On-premise or private cloud</li>
+                        <li>Air-gapped deployment option</li>
+                        <li>SOC2 & HIPAA compliant</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to accelerate your development</p>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Deploy to Your Cluster</h3>
+                    <p>Install ProspectML on your Kubernetes cluster with a simple Helm command. Works with EKS, GKE, AKS, or any K8s distribution.</p>
+                    <div class="step-example">
+                        <span class="example-label">Quick Install:</span>
+                        <code>helm install prospectml prospectml/prospectml --set license.key=YOUR_KEY</code>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Describe Your Task</h3>
+                    <p>Tell the AI agent what you need in plain English. Upload data files, specify requirements, and let the agent handle the rest.</p>
+                    <div class="step-example">
+                        <span class="example-label">Example:</span>
+                        <code>"Build a sentiment analysis model using this training data, and serve it as a REST API"</code>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Production Code</h3>
+                    <p>The AI agent writes, tests, and optimizes your code. Download the complete implementation with documentation and deployment instructions.</p>
+                    <div class="deliverables">
+                        <div class="deliverable">📦 Complete source code</div>
+                        <div class="deliverable">🧪 Test suites</div>
+                        <div class="deliverable">📚 Documentation</div>
+                        <div class="deliverable">🚀 Deployment scripts</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>Ready to accelerate your development?</h3>
+                <a href="pricing.html" class="btn-cta-primary">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="industries">
+        <div class="container">
+            <h2 class="section-title">Built For AI Model Development</h2>
+            <p class="section-subtitle">Accelerate machine learning with AI agents</p>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">🧠</div>
+                    <h3>Machine Learning</h3>
+                    <p>Transformers, CNNs, GANs, RL, Transformers, Structured Data, and any custom architecture you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>How does ProspectML work?</summary>
+                    <p>ProspectML deploys AI agents to your Kubernetes cluster. These agents receive your requirements through a web interface and automatically write, test, and optimize code to meet your specifications.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What models are supported?</summary>
+                    <p>The ProspectML agents are flexible enough to train any model you need. They can train models from scratch, or fine-tune existing models.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my code secure?</summary>
+                    <p>Yes. ProspectML runs entirely on your infrastructure. No code or data ever leaves your cluster. The AI agents operate within your security perimeter.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What Kubernetes versions are supported?</summary>
+                    <p>Kubernetes 1.19+ on any provider (EKS, GKE, AKS, OpenShift, Rancher, or bare metal).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How is ProspectML licensed?</summary>
+                    <p>Per-cluster licensing at $1000/month. Includes unlimited agents and users within the cluster. 14-day free trial included.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I try before buying?</summary>
+                    <p>Yes! Every installation includes a 14-day free trial. No credit card required to start.</p>
+                </details>
+            </div>
+            
+            <div class="support-cta">
+                <h3>Have more questions?</h3>
+                <p>Our team is here to help you get started.</p>
+                <a href="mailto:info@prospectml.com" class="btn-support">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
+                    </div>
+                    <span class="footer-title">ProspectML</span>
+                </div>
+                <p class="footer-copyright">© 2025 Algorithmic Research Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

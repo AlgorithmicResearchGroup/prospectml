@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProspectML - Enterprise AI Platform | Build ML Models Without Data Scientists</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enterprise.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="enterprise-body">
+    <!-- Navigation -->
+    <nav class="enterprise-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
+                <span class="nav-tag">Enterprise</span>
+            </div>
+            <div class="nav-links">
+                <a href="#roi-calculator" class="nav-link">ROI Calculator</a>
+                <a href="#industries" class="nav-link">Industries</a>
+                <a href="#security" class="nav-link">Security</a>
+                <a href="pricing-enterprise.html" class="nav-link">Pricing</a>
+                <a href="#" class="btn-nav-cta">Schedule Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="enterprise-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">FOR ENTERPRISES READY TO LEVERAGE AI</div>
+                <h1 class="hero-title">
+                    Build ML Models Without Hiring Data Scientists
+                </h1>
+                <p class="hero-description">
+                    ProspectML empowers your existing developers to create production-ready machine learning models. Deploy on your infrastructure, train models with plain English instructions, and save millions on data science talent.
+                </p>
+                <div class="hero-stats-preview">
+                    <div class="stat-item">
+                        <div class="stat-value">$200k+</div>
+                        <div class="stat-label">Annual savings per data scientist role</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">10x</div>
+                        <div class="stat-label">Faster model development</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">On-premise deployment</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#roi-calculator" class="btn-primary">Calculate Your ROI</a>
+                    <a href="#demo" class="btn-secondary">Watch 5-Min Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <p class="trust-intro">Trusted by enterprises across industries</p>
+            <div class="trust-logos">
+                <div class="industry-badge">Banking</div>
+                <div class="industry-badge">Healthcare</div>
+                <div class="industry-badge">Manufacturing</div>
+                <div class="industry-badge">Logistics</div>
+                <div class="industry-badge">Retail</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">Your Developers Can Now Build ML Models</h2>
+            <p class="section-subtitle">No PhD required. No months of training. Just results.</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Reduce Costs by 90%</h3>
+                    <p>Stop competing for scarce $200k+ data scientists. Your existing team can build models at a fraction of the cost.</p>
+                    <div class="value-metric">
+                        <span class="metric-label">Average savings:</span>
+                        <span class="metric-value">$180k per model/year</span>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Ship Models in Days, Not Months</h3>
+                    <p>From requirement to production in days. No more waiting months for model development and iteration.</p>
+                    <div class="value-metric">
+                        <span class="metric-label">Time to production:</span>
+                        <span class="metric-value">5 days average</span>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Your Data Never Leaves</h3>
+                    <p>Deploy on your Kubernetes cluster. Your sensitive data stays within your security perimeter.</p>
+                    <div class="value-metric">
+                        <span class="metric-label">Data exposure:</span>
+                        <span class="metric-value">Zero external access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section id="roi-calculator" class="roi-section">
+        <div class="container">
+            <h2 class="section-title">Calculate Your ROI</h2>
+            <p class="section-subtitle">See how much you can save with ProspectML</p>
+            
+            <div class="roi-calculator">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>Number of ML projects annually</label>
+                        <input type="number" id="models-per-year" value="12" min="1" max="100">
+                        <span class="input-help">Include new models, retraining, updates, and experiments</span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Average data scientist salary in your area</label>
+                        <div class="input-with-prefix">
+                            <span class="prefix">$</span>
+                            <input type="number" id="ds-salary" value="180000" min="100000" max="500000">
+                        </div>
+                        <span class="input-help">Base salary only (we'll add benefits)</span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Current team size working on ML</label>
+                        <input type="number" id="team-size" value="2" min="0" max="50">
+                        <span class="input-help">Data scientists and ML engineers</span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Average time per ML project (weeks)</label>
+                        <input type="number" id="time-to-build" value="4" min="1" max="52">
+                        <span class="input-help">Including model updates and retraining cycles</span>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <h3>Your Projected Annual Savings</h3>
+                    
+                    <div class="result-item highlight">
+                        <span class="result-label">Total Cost Savings</span>
+                        <span class="result-value" id="total-savings">$420,000</span>
+                    </div>
+                    
+                    <div class="result-breakdown">
+                        <div class="result-item">
+                            <span class="result-label">Reduced hiring needs</span>
+                            <span class="result-value" id="hiring-savings">$240,000</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Productivity gains</span>
+                            <span class="result-value" id="productivity-savings">$180,000</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">ProspectML annual investment</span>
+                            <span class="result-value negative">-$12,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="roi-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">ROI</span>
+                            <span class="summary-value" id="roi-percentage">3,400%</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Payback Period</span>
+                            <span class="summary-value" id="payback-period">2 weeks</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn-primary">Get Detailed ROI Report</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section id="industries" class="industries-section">
+        <div class="container">
+            <h2 class="section-title">Built for Your Industry</h2>
+            <p class="section-subtitle">Pre-trained on industry-specific use cases</p>
+            
+            <div class="industry-cards">
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-university"></i></span>
+                        <h3>Banking & Financial Services</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Common Use Cases:</h4>
+                        <ul>
+                            <li>Credit risk scoring</li>
+                            <li>Fraud detection</li>
+                            <li>Customer churn prediction</li>
+                            <li>Loan default prediction</li>
+                        </ul>
+                    </div>
+                    <div class="industry-stat">
+                        <span class="stat-highlight">45%</span> reduction in model development time
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-hospital"></i></span>
+                        <h3>Healthcare</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Common Use Cases:</h4>
+                        <ul>
+                            <li>Patient readmission prediction</li>
+                            <li>Treatment outcome analysis</li>
+                            <li>Resource optimization</li>
+                            <li>Claims processing</li>
+                        </ul>
+                    </div>
+                    <div class="industry-stat">
+                        <span class="stat-highlight">On-premise</span> deployment ready
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-industry"></i></span>
+                        <h3>Manufacturing</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Common Use Cases:</h4>
+                        <ul>
+                            <li>Predictive maintenance</li>
+                            <li>Quality control</li>
+                            <li>Demand forecasting</li>
+                            <li>Supply chain optimization</li>
+                        </ul>
+                    </div>
+                    <div class="industry-stat">
+                        <span class="stat-highlight">60%</span> reduction in downtime
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-shipping-fast"></i></span>
+                        <h3>Logistics & Supply Chain</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Common Use Cases:</h4>
+                        <ul>
+                            <li>Route optimization</li>
+                            <li>Delivery time prediction</li>
+                            <li>Inventory management</li>
+                            <li>Demand planning</li>
+                        </ul>
+                    </div>
+                    <div class="industry-stat">
+                        <span class="stat-highlight">30%</span> improvement in accuracy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Security & Compliance -->
+    <section id="security" class="security-section">
+        <div class="container">
+            <h2 class="section-title">Enterprise-Grade Security</h2>
+            <p class="section-subtitle">Your data never leaves your infrastructure</p>
+            
+            <div class="security-grid">
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-lock"></i></div>
+                    <h3>On-Premise Deployment</h3>
+                    <p>Runs entirely within your Kubernetes cluster. No external API calls, no data leakage.</p>
+                </div>
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Air-Gapped Option</h3>
+                    <p>Complete isolation from external networks. Perfect for highly sensitive environments.</p>
+                </div>
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-key"></i></div>
+                    <h3>Access Control</h3>
+                    <p>Built-in user management with role-based permissions and comprehensive audit logs.</p>
+                </div>
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Complete Auditability</h3>
+                    <p>Track every model, every change, every deployment. Full lineage and versioning.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="implementation">
+        <div class="container">
+            <h2 class="section-title">Simple Implementation</h2>
+            <p class="section-subtitle">From purchase to production in one day</p>
+            
+            <div class="implementation-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Morning: Deploy</h3>
+                        <p>One Helm command installs ProspectML on your Kubernetes cluster</p>
+                        <code>helm repo add prospectml https://charts.prospectml.com
+helm install prospectml prospectml/prospectml \
+  --set aiProvider.anthropic.apiKey=YOUR_API_KEY</code>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Afternoon: Configure</h3>
+                        <p>Connect to your data sources, set up user access, configure resources</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Next Day: First Model</h3>
+                        <p>Your team builds their first production ML model</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="support-promise">
+                <h3>White-Glove Support Included</h3>
+                <p>Our engineers help you deploy, train your team, and build your first models.</p>
+                <div class="support-features">
+                    <div class="support-item"><i class="fas fa-check"></i> Deployment assistance</div>
+                    <div class="support-item"><i class="fas fa-check"></i> Team training (4 hours)</div>
+                    <div class="support-item"><i class="fas fa-check"></i> First model walkthrough</div>
+                    <div class="support-item"><i class="fas fa-check"></i> 24/7 enterprise support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="enterprise-cta">
+        <div class="container">
+            <h2>Ready to Democratize ML in Your Organization?</h2>
+            <p>Join hundreds of enterprises building ML models without the talent shortage.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary-large">Schedule Executive Briefing</a>
+                <a href="#" class="btn-secondary-large">Download ROI Whitepaper</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="enterprise-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#industries">Features</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="pricing-enterprise.html">Pricing</a></li>
+                        <li><span style="color: #999;">Documentation</span></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="#industries">Banking</a></li>
+                        <li><a href="#industries">Healthcare</a></li>
+                        <li><a href="#industries">Manufacturing</a></li>
+                        <li><a href="#industries">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#roi-calculator">ROI Calculator</a></li>
+                        <li><span style="color: #999;">Whitepapers</span></li>
+                        <li><span style="color: #999;">Webinars</span></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://www.algorithmicresearchgroup.com/" target="_blank">About Us</a></li>
+                        <li><a href="mailto:info@prospectml.com">Contact Sales</a></li>
+                        <li><span style="color: #999;">Partners</span></li>
+                        <li><a href="https://www.algorithmicresearchgroup.com/" target="_blank">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <img src="images/arg-mark.svg" alt="ProspectML Logo" class="footer-logo">
+                    <span>ProspectML</span>
+                </div>
+                <p class="footer-copyright">© 2025 Algorithmic Research Group. All rights reserved. | <span style="color: #999;">Privacy Policy</span> | <span style="color: #999;">Terms of Service</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/roi-calculator.js"></script>
+</body>
+</html>

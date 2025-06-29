@@ -3,235 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProspectML - AI Coding Agents for Kubernetes</title>
+    <title>ProspectML - AI ML Engineer | Your Drop-in ML Engineer as a Service</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/landing.css">
-    <link rel="stylesheet" href="css/refined.css">
+    <link rel="stylesheet" href="css/enterprise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="landing-body">
+<body class="enterprise-body">
     <!-- Navigation -->
-    <nav class="landing-nav">
+    <nav class="nav">
         <div class="nav-container">
             <div class="nav-brand">
                 <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
+                <span class="brand-name">ProspectML</span>
             </div>
             <div class="nav-links">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="pricing.html#purchase" class="btn-nav-primary">Get Started</a>
+                <a href="#industries" class="nav-link">Use Cases</a>
+                <a href="#deployment" class="nav-link">Deployment</a>
+                <a href="pricing-enterprise.html" class="nav-link">Pricing</a>
+                <a href="pricing-enterprise.html#purchase" class="btn-nav-cta">Try Free</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-grid"></div>
-        <div class="hero-glow"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title">
-                Your data. Your goals.<br>
-                <span class="gradient-text">Our AI trains the model</span>
-            </h1>
-            <h2 class="hero-subtitle">AI Agents That Train Models For You</h2>
-            <p class="hero-description">
-                Stop spending weeks building ML models. Deploy ProspectML on your Kubernetes cluster and let AI agents automatically train, test, and optimize models based on your requirements.
-            </p>
-            <div class="hero-cta">
-                <a href="pricing.html#purchase" class="btn-hero-primary">Start 14-Day Trial</a>
-                <a href="#how-it-works" class="btn-hero-secondary">See How It Works</a>
-            </div>
-            
-            <!-- Stats -->
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">10x</div>
-                    <div class="stat-label">Faster Development</div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">YOUR AI ML ENGINEER ON DEMAND</div>
+                <h1 class="hero-title">
+                    Deploy an Army of AI Agents<br>to Build Your ML Models
+                </h1>
+                <p class="hero-description">
+                    ProspectML isn't AutoML. Give it a prompt describing what you need, and it spawns unlimited AI agents that work in parallel - exploring data, testing approaches, optimizing models. Like having an entire ML team working 24/7.
+                </p>
+                <div class="hero-stats-preview">
+                    <div class="stat-item">
+                        <div class="stat-value">Unlimited Agents</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">One Prompt</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">Your Infrastructure</div>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Your Infrastructure</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">14</div>
-                    <div class="stat-label">Day Free Trial</div>
+                <div class="hero-cta">
+                    <a href="pricing-enterprise.html#purchase" class="btn-secondary">Try Free</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="feature-section">
+    <!-- Trust Indicators -->
+    <section class="trust-section">
         <div class="container">
-            <h2 class="section-title">Enterprise AI Development Platform</h2>
-            <p class="section-subtitle">Deploy once, accelerate development forever</p>
+            <p class="trust-intro">Powering predictive intelligence across industries</p>
+            <div class="trust-logos">
+                <div class="industry-badge">Oil & Gas</div>
+                <div class="industry-badge">Manufacturing</div>
+                <div class="industry-badge">Fintech</div>
+                <div class="industry-badge">Healthcare</div>
+                <div class="industry-badge">IoT</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">More Than AutoML: An AI That Works Like an ML Engineer</h2>
+            <p class="section-subtitle">Flexible, intelligent, and actually understands your business</p>
             
-            <div class="features-grid">
-                <!-- AI Agents That Code -->
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI Agents That Code</h3>
-                    <p class="feature-tagline">Describe what you need, get production code</p>
-                    <p class="feature-description">
-                        Our AI agents understand your requirements and automatically train, test, and optimize models. From data processing to model training, they handle the implementation details.
-                    </p>
-                    <ul class="feature-list">
-                        <li>Natural language to working models</li>
-                        <li>Automatic testing and validation</li>
-                        <li>Continuous optimization</li>
-                    </ul>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Multiple AI Agents Working in Parallel</h3>
+                    <p>One prompt spawns an army of specialized agents. Some explore your data, others test algorithms, more optimize hyperparameters - all working simultaneously to deliver the best solution.</p>
+                    <div class="value-metric">
+                        <span class="metric-label">Agents deployed:</span>
+                        <span class="metric-value">10-100+ per task</span>
+                    </div>
                 </div>
 
-                <!-- Kubernetes Native -->
-                <div class="feature-card">
-                    <div class="feature-icon">☸️</div>
-                    <h3>Kubernetes Native</h3>
-                    <p class="feature-tagline">Seamless integration with your K8s cluster</p>
-                    <p class="feature-description">
-                        Built specifically for Kubernetes environments. Deploy with Helm, scale with your cluster, and integrate with your existing DevOps pipeline.
-                    </p>
-                    <ul class="feature-list">
-                        <li>One-command Helm deployment</li>
-                        <li>Auto-scaling based on workload</li>
-                        <li>Works with any K8s provider</li>
-                    </ul>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Comprehensive Exploration & Testing</h3>
+                    <p>Agents systematically explore every angle - different algorithms, feature combinations, time windows. They find solutions a single engineer might miss.</p>
+                    <div class="value-metric">
+                        <span class="metric-label">Approaches tested:</span>
+                        <span class="metric-value">100s per model</span>
+                    </div>
                 </div>
 
-                <!-- Complete Privacy -->
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Complete Privacy</h3>
-                    <p class="feature-tagline">Your code and data never leaves your cluster</p>
-                    <p class="feature-description">
-                        Everything runs on your infrastructure. Your code, data, and models stay completely within your control. No external dependencies, no data leakage.
-                    </p>
-                    <ul class="feature-list">
-                        <li>On-premise or private cloud</li>
-                        <li>Air-gapped deployment option</li>
-                        <li>SOC2 & HIPAA compliant</li>
-                    </ul>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>From Prompt to Production in Hours</h3>
+                    <p>Describe your need in plain English. Agents handle everything: data analysis, feature engineering, model selection, optimization, deployment. Complete automation.</p>
+                    <div class="value-metric">
+                        <span class="metric-label">Time to deploy:</span>
+                        <span class="metric-value">2-4 hours average</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
+    <!-- AI Agent vs AutoML -->
+    <section class="value-prop">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Three simple steps to accelerate your development</p>
+            <h2 class="section-title">See the Difference: AI Agents vs Traditional AutoML</h2>
+            <p class="section-subtitle">Why an army of AI agents beats rigid automation</p>
             
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Deploy to Your Cluster</h3>
-                    <p>Install ProspectML on your Kubernetes cluster with a simple Helm command. Works with EKS, GKE, AKS, or any K8s distribution.</p>
-                    <div class="step-example">
-                        <span class="example-label">Quick Install:</span>
-                        <code>helm install prospectml prospectml/prospectml --set license.key=YOUR_KEY</code>
+            <div class="roi-calculator">
+                <div class="calculator-inputs">
+                    <h3 style="color: var(--enterprise-dark); margin-bottom: 2rem;">Traditional AutoML</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Upload Clean Data</h3>
+                            <p>Hope your CSV fits their template</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Select Model Type</h3>
+                            <p>Limited to preset options</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Wait for Results</h3>
+                            <p>Black box, no visibility</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>Take It or Leave It</h3>
+                            <p>No customization possible</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Describe Your Task</h3>
-                    <p>Tell the AI agent what you need in plain English. Upload data files, specify requirements, and let the agent handle the rest.</p>
-                    <div class="step-example">
-                        <span class="example-label">Example:</span>
-                        <code>"Build a sentiment analysis model using this training data, and serve it as a REST API"</code>
+                <div class="calculator-results">
+                    <h3 style="color: var(--enterprise-dark);">ProspectML AI Agents</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-marker" style="background: var(--enterprise-accent);">1</div>
+                        <div class="timeline-content">
+                            <h3>Write Your Prompt</h3>
+                            <p>"Predict pump failures using sensor data"</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Get Production Code</h3>
-                    <p>The AI agent writes, tests, and optimizes your code. Download the complete implementation with documentation and deployment instructions.</p>
-                    <div class="deliverables">
-                        <div class="deliverable">📦 Complete source code</div>
-                        <div class="deliverable">🧪 Test suites</div>
-                        <div class="deliverable">📚 Documentation</div>
-                        <div class="deliverable">🚀 Deployment scripts</div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker" style="background: var(--enterprise-accent);">2</div>
+                        <div class="timeline-content">
+                            <h3>Agents Swarm Your Data</h3>
+                            <p>10-100 agents explore in parallel</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker" style="background: var(--enterprise-accent);">3</div>
+                        <div class="timeline-content">
+                            <h3>Test Everything</h3>
+                            <p>Try 100s of approaches simultaneously</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker" style="background: var(--enterprise-accent);">4</div>
+                        <div class="timeline-content">
+                            <h3>Deploy Best Solution</h3>
+                            <p>Custom-built for your exact needs</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="cta-section">
-                <h3>Ready to accelerate your development?</h3>
-                <a href="pricing.html" class="btn-cta-primary">View Pricing</a>
+            <div class="support-promise" style="margin-top: 3rem;">
+                <h3>One Prompt, Complete Solution</h3>
+                <p>Watch how a single prompt unleashes an army of AI agents to solve complex ML problems</p>
+                
+                <div class="industry-cards" style="margin-top: 2rem;">
+                    <div class="industry-card">
+                        <div class="industry-header">
+                            <span class="industry-icon"><i class="fas fa-file-alt"></i></span>
+                            <h3>Your Prompt</h3>
+                        </div>
+                        <code style="display: block; padding: 1rem; background: var(--enterprise-light-gray); border-radius: 8px; margin: 1rem 0;">
+"Build a model to predict equipment failures 72 hours in advance using vibration sensor data, maintenance logs, and weather patterns. Prioritize critical pumps and minimize false alarms."
+                        </code>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="industry-header">
+                            <span class="industry-icon"><i class="fas fa-robot"></i></span>
+                            <h3>AI Agents Deploy</h3>
+                        </div>
+                        <div class="use-cases">
+                            <ul>
+                                <li><strong>Data Explorer Agents:</strong> Analyze sensor patterns, detect anomalies</li>
+                                <li><strong>Feature Engineering Agents:</strong> Create time-series features, weather correlations</li>
+                                <li><strong>Model Testing Agents:</strong> Try XGBoost, LSTM, ensemble methods</li>
+                                <li><strong>Optimization Agents:</strong> Tune for 72-hour accuracy vs false alarms</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="industry-header">
+                            <span class="industry-icon"><i class="fas fa-bullseye"></i></span>
+                            <h3>Delivered Solution</h3>
+                        </div>
+                        <div class="results" style="background: transparent; padding: 0;">
+                            <ul>
+                                <li>Custom ensemble model combining 3 algorithms</li>
+                                <li>94% accuracy on critical pump predictions</li>
+                                <li>API endpoint ready for integration</li>
+                                <li>Complete monitoring dashboard included</li>
+                            </ul>
+                        </div>
+                        <div class="industry-result">
+                            <span class="result-metric">4 hours</span> from prompt to production
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases -->
-    <section class="industries">
+
+    <!-- Industries -->
+    <section id="industries" class="industries-section">
         <div class="container">
-            <h2 class="section-title">Built For AI Model Development</h2>
-            <p class="section-subtitle">Accelerate machine learning with AI agents</p>
+            <h2 class="section-title">Solving Real Problems in Critical Industries</h2>
+            <p class="section-subtitle">Where every prediction drives millions in value</p>
             
-            <div class="industries-grid">
+            <div class="industry-cards">
                 <div class="industry-card">
-                    <div class="industry-icon">🧠</div>
-                    <h3>Machine Learning</h3>
-                    <p>Transformers, CNNs, GANs, RL, Transformers, Structured Data, and any custom architecture you need.</p>
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-oil-can"></i></span>
+                        <h3>Oil & Gas</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Transform Your Operations:</h4>
+                        <ul>
+                            <li><strong>Prevent Catastrophic Failures:</strong> Detect equipment anomalies 72 hours before failure</li>
+                            <li><strong>Optimize Production:</strong> Increase yield by 15% with reservoir modeling</li>
+                            <li><strong>Ensure Safety:</strong> Real-time pipeline integrity monitoring</li>
+                            <li><strong>Reduce Downtime:</strong> Predictive maintenance across all assets</li>
+                        </ul>
+                    </div>
+                    <div class="industry-result">
+                        <span class="result-metric">$50M+</span> saved annually in prevented downtime
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-industry"></i></span>
+                        <h3>Manufacturing</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Revolutionize Your Factory Floor:</h4>
+                        <ul>
+                            <li><strong>Zero Unplanned Downtime:</strong> Predict machine failures before they happen</li>
+                            <li><strong>Perfect Quality:</strong> Catch defects in real-time with vision ML</li>
+                            <li><strong>Just-in-Time Excellence:</strong> Optimize inventory with demand forecasting</li>
+                            <li><strong>Energy Efficiency:</strong> Reduce consumption by 30% with smart scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="industry-result">
+                        <span class="result-metric">6x ROI</span> in first year of deployment
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-credit-card"></i></span>
+                        <h3>Fintech</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Stay Ahead of Financial Risk:</h4>
+                        <ul>
+                            <li><strong>Stop Fraud Instantly:</strong> Block suspicious transactions in <50ms</li>
+                            <li><strong>Smarter Lending:</strong> Reduce defaults by 45% with better risk models</li>
+                            <li><strong>Market Edge:</strong> Deploy trading strategies in minutes, not months</li>
+                            <li><strong>Customer Intelligence:</strong> Predict churn before it happens</li>
+                        </ul>
+                    </div>
+                    <div class="industry-result">
+                        <span class="result-metric">$100M+</span> in fraud prevented annually
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-hospital"></i></span>
+                        <h3>Healthcare</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Better Patient Outcomes at Scale:</h4>
+                        <ul>
+                            <li><strong>Save Lives:</strong> Identify high-risk patients 48 hours earlier</li>
+                            <li><strong>Personalized Care:</strong> Match treatments to patient profiles</li>
+                            <li><strong>Operational Excellence:</strong> Optimize bed utilization by 25%</li>
+                            <li><strong>Proactive Monitoring:</strong> Detect device anomalies before critical failures</li>
+                        </ul>
+                    </div>
+                    <div class="industry-result">
+                        <span class="result-metric">30%</span> reduction in readmission rates
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-wifi"></i></span>
+                        <h3>IoT & Smart Cities</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Intelligence at the Edge:</h4>
+                        <ul>
+                            <li><strong>Massive Scale:</strong> Process millions of sensor streams in real-time</li>
+                            <li><strong>Smart Infrastructure:</strong> Reduce traffic congestion by 40%</li>
+                            <li><strong>Grid Optimization:</strong> Balance energy loads automatically</li>
+                            <li><strong>Environmental Safety:</strong> Detect hazards before they spread</li>
+                        </ul>
+                    </div>
+                    <div class="industry-result">
+                        <span class="result-metric">Billions</span> of predictions daily
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-truck"></i></span>
+                        <h3>Logistics & Supply Chain</h3>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Deliver Excellence Every Time:</h4>
+                        <ul>
+                            <li><strong>Perfect Routes:</strong> Save 30% on fuel with AI optimization</li>
+                            <li><strong>Stock Smart:</strong> Never run out, never overstock</li>
+                            <li><strong>Warehouse AI:</strong> 50% faster pick-and-pack operations</li>
+                            <li><strong>Fleet Health:</strong> Zero breakdowns with predictive maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="industry-result">
+                        <span class="result-metric">99.9%</span> on-time delivery achieved
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <!-- Deployment -->
+    <section id="deployment" class="security-section">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title">Your AI ML Engineer Lives in Your Infrastructure</h2>
+            <p class="section-subtitle">Available 24/7, totally secure, completely under your control</p>
             
-            <div class="faq-grid">
-                <details class="faq-item">
-                    <summary>How does ProspectML work?</summary>
-                    <p>ProspectML deploys AI agents to your Kubernetes cluster. These agents receive your requirements through a web interface and automatically write, test, and optimize code to meet your specifications.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What models are supported?</summary>
-                    <p>The ProspectML agents are flexible enough to train any model you need. They can train models from scratch, or fine-tune existing models.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Is my code secure?</summary>
-                    <p>Yes. ProspectML runs entirely on your infrastructure. No code or data ever leaves your cluster. The AI agents operate within your security perimeter.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What Kubernetes versions are supported?</summary>
-                    <p>Kubernetes 1.19+ on any provider (EKS, GKE, AKS, OpenShift, Rancher, or bare metal).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How is ProspectML licensed?</summary>
-                    <p>Per-cluster licensing at $1000/month. Includes unlimited agents and users within the cluster. 14-day free trial included.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Can I try before buying?</summary>
-                    <p>Yes! Every installation includes a 14-day free trial. No credit card required to start.</p>
-                </details>
+            <div class="security-grid">
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Native</h3>
+                    <p>Scale seamlessly on AWS, Azure, or GCP. Perfect for dynamic workloads and global deployments.</p>
+                </div>
+                
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-building"></i></div>
+                    <h3>On-Premise</h3>
+                    <p>Complete control for sensitive operations. Ideal for oil & gas, healthcare, and financial services.</p>
+                </div>
+                
+                <div class="security-feature">
+                    <div class="security-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Hybrid</h3>
+                    <p>Best of both worlds. Train on powerful cloud GPUs, deploy at the edge or in secure facilities.</p>
+                </div>
             </div>
             
-            <div class="support-cta">
-                <h3>Have more questions?</h3>
-                <p>Our team is here to help you get started.</p>
-                <a href="mailto:info@prospectml.com" class="btn-support">Contact Sales</a>
+            <div class="support-promise" style="margin-top: 3rem;">
+                <h3>Deploy Your AI Agent Army in Minutes</h3>
+                <div class="timeline-content" style="background: var(--enterprise-dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+                    <pre><code># Add ProspectML helm repository
+helm repo add prospectml https://charts.prospectml.com
+
+# Install ProspectML with your Anthropic API key
+helm install prospectml prospectml/prospectml \
+  --set aiProvider.anthropic.apiKey=YOUR_API_KEY
+
+# Submit your first ML task
+prospectml run "Predict equipment failures 72 hours in advance using \
+  vibration sensors, maintenance logs, and weather data"
+
+# Output: Deploying 47 specialized agents...
+# Output: Model ready in 3.2 hours - 94% accuracy achieved</code></pre>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="industries-section">
+        <div class="container">
+            <h2 class="section-title">Everything Your AI ML Engineer Can Do</h2>
+            
+            <div class="industry-cards">
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-robot"></i></span>
+                        <h3>Intelligent Experimentation</h3>
+                    </div>
+                    <p>Your AI engineer tries multiple approaches, explains trade-offs, and recommends the best solution for your specific constraints.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-chart-bar"></i></span>
+                        <h3>Real-time Monitoring</h3>
+                    </div>
+                    <p>Track model performance, data drift, and system health with built-in monitoring dashboards.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-sync-alt"></i></span>
+                        <h3>Automated Retraining</h3>
+                    </div>
+                    <p>Models automatically retrain when performance degrades or new data patterns emerge.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-chart-line"></i></span>
+                        <h3>A/B Testing</h3>
+                    </div>
+                    <p>Test new models against production with built-in A/B testing and gradual rollout capabilities.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-search"></i></span>
+                        <h3>Full Transparency</h3>
+                    </div>
+                    <p>Your AI engineer explains every decision, shows its work, and helps you understand exactly how your models operate.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <span class="industry-icon"><i class="fas fa-bolt"></i></span>
+                        <h3>High Performance</h3>
+                    </div>
+                    <p>Optimized inference with automatic model compression, caching, and hardware acceleration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container" style="text-align: center;">
+            <h2>Deploy an Army of AI Agents to Build Your ML</h2>
+            <p style="margin-bottom: 2rem;">One prompt. Unlimited agents. Production-ready models in hours.</p>
+            <div class="cta-buttons" style="justify-content: center; gap: 1rem; margin-bottom: 2rem;">
+                <a href="pricing-enterprise.html#purchase" class="btn-primary">Start Free Trial</a>
+                <a href="#" class="btn-secondary">Schedule Demo</a>
+            </div>
+            <p class="cta-note">30-day trial • Your infrastructure • No ML expertise needed</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="landing-footer">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="nav-brand">
-                        <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
-                    </div>
-                    <span class="footer-title">ProspectML</span>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#industries">Features</a></li>
+                        <li><a href="#deployment">Deployment</a></li>
+                        <li><a href="pricing-enterprise.html">Pricing</a></li>
+                        <li><span style="color: #999;">Documentation</span></li>
+                    </ul>
                 </div>
-                <p class="footer-copyright">© 2025 ProspectML. All rights reserved.</p>
+                <div class="footer-column">
+                    <h4>Use Cases</h4>
+                    <ul>
+                        <li><a href="#industries">Manufacturing</a></li>
+                        <li><a href="#industries">Fintech</a></li>
+                        <li><a href="#industries">Healthcare</a></li>
+                        <li><a href="#industries">IoT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><span style="color: #999;">Documentation</span></li>
+                        <li><span style="color: #999;">Tutorials</span></li>
+                        <li><span style="color: #999;">Community</span></li>
+                        <li><span style="color: #999;">Blog</span></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://www.algorithmicresearchgroup.com/" target="_blank">About</a></li>
+                        <li><a href="mailto:info@prospectml.com">Contact</a></li>
+                        <li><a href="https://www.algorithmicresearchgroup.com/" target="_blank">Careers</a></li>
+                        <li><span style="color: #999;">Privacy</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <img src="images/arg-mark.svg" alt="ProspectML Logo" class="footer-logo">
+                    <span>ProspectML</span>
+                </div>
+                <p class="footer-copyright">© 2025 Algorithmic Research Group. All rights reserved. | <span style="color: #999;">Privacy Policy</span> | <span style="color: #999;">Terms of Service</span></p>
             </div>
         </div>
     </footer>

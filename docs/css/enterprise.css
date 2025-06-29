@@ -280,8 +280,187 @@ body.enterprise-body {
 }
 
 .value-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--enterprise-primary) 0%, var(--enterprise-accent) 100%);
+    opacity: 0.1;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon::before {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 0.2;
+    border-radius: 20px;
+}
+
+.value-icon::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, var(--enterprise-primary) 0%, transparent 70%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.value-card:hover .value-icon::after {
+    opacity: 0.1;
+    transform: scale(1.2);
+}
+
+.value-icon i {
+    font-size: 1.75rem;
+    background: linear-gradient(135deg, var(--enterprise-primary) 0%, var(--enterprise-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon i {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 8px rgba(155, 96, 170, 0.3));
+}
+
+/* Custom Icon Designs */
+.icon-parallel-agents::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: var(--enterprise-primary);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.icon-parallel-agents::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--enterprise-primary);
+    border-radius: 50%;
+    opacity: 0.6;
+    transform: translate(-8px, -8px);
+    z-index: 2;
+}
+
+.icon-parallel-agents .agent-dots {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    gap: 4px;
+}
+
+.icon-parallel-agents .agent-dots span {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.icon-parallel-agents .agent-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.icon-parallel-agents .agent-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Testing Icon */
+.icon-testing::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--enterprise-primary);
+    border-radius: 8px;
+    transform: rotate(45deg);
+}
+
+.icon-testing::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--enterprise-accent);
+    border-radius: 50%;
+    z-index: 2;
+    animation: orbit 3s linear infinite;
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(20px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+/* Speed Icon */
+.icon-speed::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid var(--enterprise-primary);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.icon-speed .speed-lines {
+    position: absolute;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.icon-speed .speed-lines span {
+    width: 20px;
+    height: 2px;
+    background: var(--enterprise-accent);
+    opacity: 0;
+    animation: speedLine 1.5s ease-in-out infinite;
+}
+
+.icon-speed .speed-lines span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.icon-speed .speed-lines span:nth-child(2) {
+    animation-delay: 0.15s;
+    width: 16px;
+}
+
+.icon-speed .speed-lines span:nth-child(3) {
+    animation-delay: 0.3s;
+    width: 12px;
+}
+
+@keyframes speedLine {
+    0% { transform: translateX(0); opacity: 0; }
+    50% { transform: translateX(-10px); opacity: 1; }
+    100% { transform: translateX(-20px); opacity: 0; }
 }
 
 .value-card h3 {
@@ -490,10 +669,166 @@ body.enterprise-body {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.industry-header::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--enterprise-primary);
+    transition: width 0.3s ease;
+}
+
+.industry-card:hover .industry-header::after {
+    width: 60px;
 }
 
 .industry-icon {
-    font-size: 2.5rem;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--enterprise-light-gray) 0%, var(--enterprise-beige) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.industry-card:hover .industry-icon {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, var(--enterprise-beige) 0%, var(--enterprise-light-gray) 100%);
+}
+
+.industry-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.industry-card:hover .industry-icon::before {
+    transform: translateX(100%);
+}
+
+.industry-icon i {
+    font-size: 1.25rem;
+    color: var(--enterprise-dark);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.industry-card:hover .industry-icon i {
+    color: var(--enterprise-primary);
+    transform: scale(1.1);
+}
+
+/* Industry Custom Icons */
+.icon-oil::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: var(--enterprise-dark);
+    border-radius: 10px 10px 50% 50%;
+    bottom: 8px;
+}
+
+.icon-oil::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 8px;
+    background: var(--enterprise-dark);
+    border-radius: 4px;
+    top: 12px;
+    z-index: 2;
+}
+
+.icon-oil .oil-drop {
+    position: absolute;
+    width: 8px;
+    height: 10px;
+    background: var(--enterprise-accent);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 20px;
+    animation: oilDrip 2s ease-in-out infinite;
+}
+
+@keyframes oilDrip {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* Factory Icon */
+.icon-factory::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: var(--enterprise-dark);
+    bottom: 8px;
+    border-radius: 2px;
+}
+
+.icon-factory .chimney {
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    background: var(--enterprise-dark);
+    top: 8px;
+    left: 8px;
+    border-radius: 2px 2px 0 0;
+}
+
+.icon-factory .chimney::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background: var(--enterprise-dark);
+    top: -4px;
+    left: -1px;
+    border-radius: 2px;
+}
+
+.icon-factory .smoke {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+
+.icon-factory .smoke span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--enterprise-gray);
+    border-radius: 50%;
+    opacity: 0;
+    animation: smoke 2s ease-out infinite;
+}
+
+.icon-factory .smoke span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.icon-factory .smoke span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes smoke {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-15px) scale(1.5); opacity: 0; }
 }
 
 .industry-card h3 {
@@ -643,8 +978,666 @@ body.enterprise-body {
 }
 
 .security-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.security-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(155, 96, 170, 0.1) 0%, rgba(254, 126, 87, 0.1) 100%);
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.security-icon::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.security-feature:hover .security-icon::before {
+    transform: scale(1.15);
+    background: linear-gradient(135deg, rgba(155, 96, 170, 0.2) 0%, rgba(254, 126, 87, 0.2) 100%);
+}
+
+.security-feature:hover .security-icon::after {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.security-icon i {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--enterprise-primary) 0%, var(--enterprise-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.security-feature:hover .security-icon i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(155, 96, 170, 0.3));
+}
+
+/* Security Custom Icons */
+.icon-lock::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 24px;
+    background: var(--enterprise-dark);
+    border-radius: 4px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-lock::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid var(--enterprise-dark);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-lock .keyhole {
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    background: white;
+    border-radius: 3px 3px 0 0;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Shield Icon */
+.icon-shield::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 36px;
+    background: var(--enterprise-primary);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 60%, 50% 100%, 0% 60%, 0% 25%);
+    opacity: 0.2;
+}
+
+.icon-shield::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 28px;
+    background: var(--enterprise-dark);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 60%, 50% 100%, 0% 60%, 0% 25%);
+    z-index: 1;
+}
+
+.icon-shield .checkmark {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    z-index: 2;
+}
+
+.icon-shield .checkmark::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    top: 2px;
+    left: 0;
+}
+
+/* Cloud Icon */
+.icon-cloud::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background: var(--enterprise-dark);
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.icon-cloud::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--enterprise-dark);
+    border-radius: 50%;
+    bottom: 4px;
+    left: 4px;
+}
+
+.icon-cloud .cloud-dots {
+    position: absolute;
+    display: flex;
+    gap: 4px;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-cloud .cloud-dots span {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: cloudPulse 2s ease-in-out infinite;
+}
+
+.icon-cloud .cloud-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.icon-cloud .cloud-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes cloudPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Building Icon */
+.icon-building::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 36px;
+    background: var(--enterprise-dark);
+    bottom: 10px;
+    border-radius: 2px;
+}
+
+.icon-building .windows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3px;
+    padding: 4px;
+    z-index: 2;
+}
+
+.icon-building .windows span {
+    background: white;
+    opacity: 0.8;
+}
+
+/* Hybrid Icon */
+.icon-hybrid::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--enterprise-primary);
+    border-radius: 50%;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-hybrid::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--enterprise-dark);
+    border-radius: 2px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-hybrid .connection {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--enterprise-primary) 0%, var(--enterprise-dark) 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Additional icons for other sections */
+.icon-credit-card::after {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 24px;
+    background: var(--enterprise-dark);
+    border-radius: 4px;
+    border: 2px solid var(--enterprise-dark);
+}
+
+.icon-credit-card::before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 4px;
+    background: var(--enterprise-accent);
+    top: 6px;
+    z-index: 2;
+}
+
+/* Hospital Icon */
+.icon-hospital::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 3px solid var(--enterprise-dark);
+    border-radius: 4px;
+}
+
+.icon-hospital .cross {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-hospital .cross::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 4px;
+    background: var(--enterprise-error);
+    top: 6px;
+}
+
+.icon-hospital .cross::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 16px;
+    background: var(--enterprise-error);
+    left: 6px;
+}
+
+/* WiFi Icon */
+.icon-wifi::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--enterprise-dark);
+    border-radius: 50%;
+    bottom: 15px;
+}
+
+.icon-wifi .wave {
+    position: absolute;
+    border: 2px solid var(--enterprise-dark);
+    border-bottom: none;
+    border-radius: 50% 50% 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-wifi .wave:nth-child(1) {
+    width: 16px;
+    height: 8px;
+    bottom: 20px;
+    opacity: 0.6;
+}
+
+.icon-wifi .wave:nth-child(2) {
+    width: 24px;
+    height: 12px;
+    bottom: 24px;
+    opacity: 0.8;
+}
+
+.icon-wifi .wave:nth-child(3) {
+    width: 32px;
+    height: 16px;
+    bottom: 28px;
+}
+
+/* Truck Icon */
+.icon-truck::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 16px;
+    background: var(--enterprise-dark);
+    border-radius: 2px;
+    left: 8px;
+}
+
+.icon-truck::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--enterprise-dark);
+    border-radius: 2px 2px 2px 0;
+    right: 8px;
+    bottom: 4px;
+}
+
+.icon-truck .wheels {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.icon-truck .wheels span {
+    width: 6px;
+    height: 6px;
+    background: var(--enterprise-dark);
+    border-radius: 50%;
+}
+
+/* Feature Icons */
+.icon-robot-feature::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 30px;
+    background: var(--enterprise-dark);
+    border-radius: 4px 4px 50% 50% / 4px 4px 40% 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-robot-feature .eyes {
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.icon-robot-feature .eyes span {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Chart Icon */
+.icon-chart::after {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 2px;
+    background: var(--enterprise-dark);
+    bottom: 20px;
+}
+
+.icon-chart::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 28px;
+    background: var(--enterprise-dark);
+    left: 12px;
+    bottom: 20px;
+}
+
+.icon-chart .bars {
+    position: absolute;
+    bottom: 22px;
+    left: 16px;
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+}
+
+.icon-chart .bars span {
+    width: 4px;
+    background: var(--enterprise-primary);
+}
+
+.icon-chart .bars span:nth-child(1) {
+    height: 8px;
+}
+
+.icon-chart .bars span:nth-child(2) {
+    height: 16px;
+}
+
+.icon-chart .bars span:nth-child(3) {
+    height: 12px;
+}
+
+.icon-chart .bars span:nth-child(4) {
+    height: 20px;
+}
+
+/* Sync Icon (Refresh) */
+.icon-sync::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--enterprise-dark);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+.icon-sync::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--enterprise-dark);
+    top: 8px;
+    right: 8px;
+    transform: rotate(45deg);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Chart Line Icon */
+.icon-chart-line::after {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 20px;
+    border: 2px solid var(--enterprise-dark);
+    border-top: none;
+    border-right: none;
+    bottom: 20px;
+    left: 12px;
+}
+
+.icon-chart-line .line {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--enterprise-primary);
+    bottom: 26px;
+    left: 18px;
+    transform: rotate(-25deg);
+    transform-origin: left bottom;
+}
+
+.icon-chart-line .line::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--enterprise-accent);
+    border-radius: 50%;
+    right: -3px;
+    top: -2px;
+}
+
+/* Search Icon */
+.icon-search::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--enterprise-dark);
+    border-radius: 50%;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-search::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    background: var(--enterprise-dark);
+    bottom: 18px;
+    right: 16px;
+    transform: rotate(45deg);
+    transform-origin: left center;
+}
+
+/* Bolt Icon (Lightning) */
+.icon-bolt::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 36px;
+    background: var(--enterprise-accent);
+    clip-path: polygon(70% 0%, 20% 50%, 40% 50%, 0% 100%, 50% 50%, 30% 50%, 100% 0%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-bolt::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 36px;
+    background: var(--enterprise-dark);
+    clip-path: polygon(70% 0%, 20% 50%, 40% 50%, 0% 100%, 50% 50%, 30% 50%, 100% 0%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.2;
+}
+
+/* Document Icon */
+.icon-document::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 32px;
+    background: white;
+    border: 2px solid var(--enterprise-dark);
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-document::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-top: 2px solid var(--enterprise-dark);
+    border-right: 2px solid var(--enterprise-dark);
+    top: 18px;
+    right: 18px;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.icon-document .lines {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.icon-document .lines span {
+    width: 16px;
+    height: 2px;
+    background: var(--enterprise-dark);
+}
+
+/* Target Icon */
+.icon-target::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--enterprise-dark);
+    border-radius: 50%;
+}
+
+.icon-target::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--enterprise-primary);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-target .center {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--enterprise-accent);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .security-feature h3 {
@@ -724,7 +1717,7 @@ body.enterprise-body {
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    font-family: monospace;
+    font-family: 'SF Mono', Monaco, 'Inconsolata', 'Fira Code', monospace;
     display: inline-block;
     font-size: 0.875rem;
 }
@@ -900,6 +1893,182 @@ body.enterprise-body {
 
 .footer-copyright a:hover {
     color: white;
+}
+
+/* Code Block Styles */
+.code-block-container {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.code-block-header {
+    background: #2d2d2d;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #555;
+}
+
+.terminal-dot.red {
+    background: #ff5f56;
+}
+
+.terminal-dot.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-dot.green {
+    background: #27c93f;
+}
+
+.code-block-title {
+    color: #999;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.code-block-content {
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.code-block-content pre {
+    margin: 0;
+    font-family: 'SF Mono', Monaco, 'Inconsolata', 'Fira Code', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.code-block-content code {
+    color: #e6e6e6;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+}
+
+/* Syntax highlighting */
+.code-comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.code-string {
+    color: #ce9178;
+}
+
+.code-keyword {
+    color: #569cd6;
+}
+
+.code-variable {
+    color: #9cdcfe;
+}
+
+.copy-button {
+    background: var(--enterprise-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-button:hover {
+    background: var(--enterprise-secondary);
+}
+
+/* Additional Icon Styling */
+.value-icon i.fa-robot::before {
+    content: "\f544";
+}
+
+.value-icon i.fa-flask::before {
+    content: "\f0c3";
+}
+
+.value-icon i.fa-rocket::before {
+    content: "\f135";
+}
+
+/* Make all Font Awesome icons more stylized */
+.value-icon i,
+.industry-icon i,
+.security-icon i {
+    position: relative;
+    display: inline-block;
+}
+
+/* Add glow effect on hover */
+.value-card:hover .value-icon i::after,
+.industry-card:hover .industry-icon i::after,
+.security-feature:hover .security-icon i::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, currentColor 0%, transparent 70%);
+    opacity: 0.2;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+/* Add subtle animations to icons */
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+.value-card:hover .value-icon i,
+.industry-card:hover .industry-icon i,
+.security-feature:hover .security-icon i {
+    animation: iconFloat 2s ease-in-out infinite;
+}
+
+/* Special effects for specific icons */
+.fa-sync-alt {
+    animation: rotate 4s linear infinite paused;
+}
+
+.industry-card:hover .fa-sync-alt {
+    animation-play-state: running;
+}
+
+.fa-bolt {
+    position: relative;
+}
+
+.fa-bolt::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--enterprise-accent) 0%, transparent 50%);
+    opacity: 0;
+    animation: pulse 2s ease-in-out infinite;
+    pointer-events: none;
 }
 
 /* Responsive */

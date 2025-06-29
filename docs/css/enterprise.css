@@ -840,7 +840,7 @@ body.enterprise-body {
 }
 
 .difficulty-bar.filled {
-    background: #9ca3af;
+    background: var(--enterprise-accent);
 }
 
 .difficulty-bar.filled.accent {

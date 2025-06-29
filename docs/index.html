@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="css/enterprise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="enterprise-body">
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -23,35 +30,66 @@
                 <a href="#industries" class="nav-link">Use Cases</a>
                 <a href="#deployment" class="nav-link">Deployment</a>
                 <a href="pricing-enterprise.html" class="nav-link">Pricing</a>
-                <a href="pricing-enterprise.html#purchase" class="btn-nav-cta">Try Free</a>
+                <a href="pricing-enterprise.html#purchase" class="btn-nav-cta">
+                    <span>Try Free</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-tag">YOUR AI ML ENGINEER ON DEMAND</div>
+                <div class="hero-tag">
+                    <span class="tag-icon"><i class="fas fa-bolt"></i></span>
+                    YOUR AI ML ENGINEER ON DEMAND
+                </div>
                 <h1 class="hero-title">
-                    Deploy an Army of AI Agents<br>to Build Your ML Models
+                    <span class="gradient-text">Deploy an Army</span> of AI Agents<br>
+                    to Build Your <span>ML Models</span>
                 </h1>
                 <p class="hero-description">
                     ProspectML isn't AutoML. Give it a prompt describing what you need, and it spawns unlimited AI agents that work in parallel - exploring data, testing approaches, optimizing models. Like having an entire ML team working 24/7.
                 </p>
                 <div class="hero-stats-preview">
                     <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-infinity"></i></div>
                         <div class="stat-value">Unlimited Agents</div>
+                        <div class="stat-description">Scale without limits</div>
                     </div>
                     <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-edit"></i></div>
                         <div class="stat-value">One Prompt</div>
+                        <div class="stat-description">Natural language input</div>
                     </div>
                     <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-server"></i></div>
                         <div class="stat-value">Your Infrastructure</div>
+                        <div class="stat-description">Complete control</div>
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="pricing-enterprise.html#purchase" class="btn-secondary">Try Free</a>
+                    <a href="pricing-enterprise.html#purchase" class="btn-hero-primary">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#demo" class="btn-hero-secondary">
+                        <span>Request A Demo</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <span class="trust-text">Trusted by industry leaders</span>
+                    <div class="trust-indicators">
+                        <span class="trust-dot"></span>
+                        <span class="trust-dot"></span>
+                        <span class="trust-dot"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,11 +100,26 @@
         <div class="container">
             <p class="trust-intro">Powering predictive intelligence across industries</p>
             <div class="trust-logos">
-                <div class="industry-badge">Oil & Gas</div>
-                <div class="industry-badge">Manufacturing</div>
-                <div class="industry-badge">Fintech</div>
-                <div class="industry-badge">Healthcare</div>
-                <div class="industry-badge">IoT</div>
+                <div class="industry-badge">
+                    <i class="fas fa-oil-can"></i>
+                    Oil & Gas
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-industry"></i>
+                    Manufacturing
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-credit-card"></i>
+                    Fintech
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-hospital"></i>
+                    Healthcare
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-wifi"></i>
+                    IoT
+                </div>
             </div>
         </div>
     </section>
@@ -74,37 +127,66 @@
     <!-- Value Proposition -->
     <section class="value-prop">
         <div class="container">
-            <h2 class="section-title">More Than AutoML: An AI That Works Like an ML Engineer</h2>
-            <p class="section-subtitle">Flexible, intelligent, and actually understands your business</p>
+            <div class="section-header">
+                <h2 class="section-title">More Than AutoML: An AI That Works Like an ML Engineer</h2>
+                <p class="section-subtitle">Flexible, intelligent, and actually understands your business</p>
+            </div>
             
             <div class="value-grid">
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-robot"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-robot"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">01</div>
+                    </div>
                     <h3>Multiple AI Agents Working in Parallel</h3>
                     <p>One prompt spawns an army of specialized agents. Some explore your data, others test algorithms, more optimize hyperparameters - all working simultaneously to deliver the best solution.</p>
                     <div class="value-metric">
-                        <span class="metric-label">Agents deployed:</span>
-                        <span class="metric-value">10-100+ per task</span>
+                        <div class="metric-icon"><i class="fas fa-users"></i></div>
+                        <div class="metric-content">
+                            <span class="metric-label">Agents deployed:</span>
+                            <span class="metric-value">10-100+ per task</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-flask"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-flask"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">02</div>
+                    </div>
                     <h3>Comprehensive Exploration & Testing</h3>
                     <p>Agents systematically explore every angle - different algorithms, feature combinations, time windows. They find solutions a single engineer might miss.</p>
                     <div class="value-metric">
-                        <span class="metric-label">Approaches tested:</span>
-                        <span class="metric-value">100s per model</span>
+                        <div class="metric-icon"><i class="fas fa-vials"></i></div>
+                        <div class="metric-content">
+                            <span class="metric-label">Approaches tested:</span>
+                            <span class="metric-value">100s per model</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">03</div>
+                    </div>
                     <h3>From Prompt to Production in Hours</h3>
                     <p>Describe your need in plain English. Agents handle everything: data analysis, feature engineering, model selection, optimization, deployment. Complete automation.</p>
                     <div class="value-metric">
-                        <span class="metric-label">Time to deploy:</span>
-                        <span class="metric-value">2-4 hours average</span>
+                        <div class="metric-icon"><i class="fas fa-clock"></i></div>
+                        <div class="metric-content">
+                            <span class="metric-label">Time to deploy:</span>
+                            <span class="metric-value">2-4 hours average</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,122 +194,113 @@
     </section>
 
     <!-- AI Agent vs AutoML -->
-    <section class="value-prop">
+    <section class="comparison-section">
         <div class="container">
-            <h2 class="section-title">See the Difference: AI Agents vs Traditional AutoML</h2>
-            <p class="section-subtitle">Why an army of AI agents beats rigid automation</p>
-            
-            <div class="roi-calculator">
-                <div class="calculator-inputs">
-                    <h3 style="color: var(--enterprise-dark); margin-bottom: 2rem;">Traditional AutoML</h3>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">1</div>
-                        <div class="timeline-content">
-                            <h3>Upload Clean Data</h3>
-                            <p>Hope your CSV fits their template</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">2</div>
-                        <div class="timeline-content">
-                            <h3>Select Model Type</h3>
-                            <p>Limited to preset options</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">3</div>
-                        <div class="timeline-content">
-                            <h3>Wait for Results</h3>
-                            <p>Black box, no visibility</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">4</div>
-                        <div class="timeline-content">
-                            <h3>Take It or Leave It</h3>
-                            <p>No customization possible</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="calculator-results">
-                    <h3 style="color: var(--enterprise-dark);">ProspectML AI Agents</h3>
-                    <div class="timeline-item">
-                        <div class="timeline-marker" style="background: var(--enterprise-accent);">1</div>
-                        <div class="timeline-content">
-                            <h3>Write Your Prompt</h3>
-                            <p>"Predict pump failures using sensor data"</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker" style="background: var(--enterprise-accent);">2</div>
-                        <div class="timeline-content">
-                            <h3>Agents Swarm Your Data</h3>
-                            <p>10-100 agents explore in parallel</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker" style="background: var(--enterprise-accent);">3</div>
-                        <div class="timeline-content">
-                            <h3>Test Everything</h3>
-                            <p>Try 100s of approaches simultaneously</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker" style="background: var(--enterprise-accent);">4</div>
-                        <div class="timeline-content">
-                            <h3>Deploy Best Solution</h3>
-                            <p>Custom-built for your exact needs</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">See the Difference: AI Agents vs Traditional AutoML</h2>
+                <p class="section-subtitle">Why an army of AI agents beats rigid automation</p>
             </div>
             
-            <div class="support-promise" style="margin-top: 3rem;">
-                <h3>One Prompt, Complete Solution</h3>
-                <p>Watch how a single prompt unleashes an army of AI agents to solve complex ML problems</p>
+            <div class="comparison-container">
+                <div class="comparison-side traditional">
+                    <div class="comparison-header">
+                        <div class="comparison-icon traditional-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3>Traditional AutoML</h3>
+                        <div class="difficulty-indicator">
+                            <span class="difficulty-label">Complexity:</span>
+                            <div class="difficulty-bars">
+                                <span class="difficulty-bar filled"></span>
+                                <span class="difficulty-bar filled"></span>
+                                <span class="difficulty-bar filled"></span>
+                                <span class="difficulty-bar filled"></span>
+                                <span class="difficulty-bar filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-marker traditional-marker">1</div>
+                            <div class="timeline-content">
+                                <h4>Upload Clean Data</h4>
+                                <p>Hope your CSV fits their template</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker traditional-marker">2</div>
+                            <div class="timeline-content">
+                                <h4>Select Model Type</h4>
+                                <p>Limited to preset options</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker traditional-marker">3</div>
+                            <div class="timeline-content">
+                                <h4>Wait for Results</h4>
+                                <p>Black box, no visibility</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker traditional-marker">4</div>
+                            <div class="timeline-content">
+                                <h4>Take It or Leave It</h4>
+                                <p>No customization possible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="industry-cards" style="margin-top: 2rem;">
-                    <div class="industry-card">
-                        <div class="industry-header">
-                            <span class="industry-icon"><i class="fas fa-file-alt"></i></span>
-                            <h3>Your Prompt</h3>
+                <div class="comparison-divider">
+                    <div class="divider-line"></div>
+                    <div class="vs-badge">VS</div>
+                </div>
+                
+                <div class="comparison-side prospectml">
+                    <div class="comparison-header">
+                        <div class="comparison-icon prospectml-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
-                        <code style="display: block; padding: 1rem; background: var(--enterprise-light-gray); border-radius: 8px; margin: 1rem 0;">
-"Build a model to predict equipment failures 72 hours in advance using vibration sensor data, maintenance logs, and weather patterns. Prioritize critical pumps and minimize false alarms."
-                        </code>
-                    </div>
-                    
-                    <div class="industry-card">
-                        <div class="industry-header">
-                            <span class="industry-icon"><i class="fas fa-robot"></i></span>
-                            <h3>AI Agents Deploy</h3>
-                        </div>
-                        <div class="use-cases">
-                            <ul>
-                                <li><strong>Data Explorer Agents:</strong> Analyze sensor patterns, detect anomalies</li>
-                                <li><strong>Feature Engineering Agents:</strong> Create time-series features, weather correlations</li>
-                                <li><strong>Model Testing Agents:</strong> Try XGBoost, LSTM, ensemble methods</li>
-                                <li><strong>Optimization Agents:</strong> Tune for 72-hour accuracy vs false alarms</li>
-                            </ul>
+                        <h3>ProspectML AI Agents</h3>
+                        <div class="difficulty-indicator">
+                            <span class="difficulty-label">Complexity:</span>
+                            <div class="difficulty-bars">
+                                <span class="difficulty-bar filled accent"></span>
+                                <span class="difficulty-bar"></span>
+                                <span class="difficulty-bar"></span>
+                                <span class="difficulty-bar"></span>
+                                <span class="difficulty-bar"></span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="industry-card">
-                        <div class="industry-header">
-                            <span class="industry-icon"><i class="fas fa-bullseye"></i></span>
-                            <h3>Delivered Solution</h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-marker prospectml-marker">1</div>
+                            <div class="timeline-content">
+                                <h4>Write Your Prompt</h4>
+                                <p>"Predict pump failures using sensor data"</p>
+                            </div>
                         </div>
-                        <div class="results" style="background: transparent; padding: 0;">
-                            <ul>
-                                <li>Custom ensemble model combining 3 algorithms</li>
-                                <li>High accuracy predictions tailored to your specific needs</li>
-                                <li>API endpoint ready for integration</li>
-                                <li>Complete monitoring dashboard included</li>
-                            </ul>
+                        <div class="timeline-item">
+                            <div class="timeline-marker prospectml-marker">2</div>
+                            <div class="timeline-content">
+                                <h4>Agents Swarm Your Data</h4>
+                                <p>10-100 agents explore in parallel</p>
+                            </div>
                         </div>
-                        <div class="industry-result">
-                            <span class="result-metric">4 hours</span> from prompt to production
+                        <div class="timeline-item">
+                            <div class="timeline-marker prospectml-marker">3</div>
+                            <div class="timeline-content">
+                                <h4>Test Everything</h4>
+                                <p>Try 100s of approaches simultaneously</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker prospectml-marker">4</div>
+                            <div class="timeline-content">
+                                <h4>Deploy Best Solution</h4>
+                                <p>Custom-built for your exact needs</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -235,126 +308,139 @@
         </div>
     </section>
 
-
     <!-- Industries -->
+    <!-- Technical Capabilities -->
     <section id="industries" class="industries-section">
         <div class="container">
-            <h2 class="section-title">Solving Real Problems in Critical Industries</h2>
-            <p class="section-subtitle">Where every prediction drives millions in value</p>
+            <div class="section-header">
+                <h2 class="section-title">True Flexibility: Any Data, Any Model, Any Problem</h2>
+                <p class="section-subtitle">Unlike rigid AutoML platforms, ProspectML adapts to your data and requirements</p>
+            </div>
             
             <div class="industry-cards">
                 <div class="industry-card">
                     <div class="industry-header">
-                        <span class="industry-icon"><i class="fas fa-oil-can"></i></span>
-                        <h3>Oil & Gas</h3>
+                        <span class="industry-icon"><i class="fas fa-chart-line"></i></span>
+                        <h3>Time Series & Forecasting</h3>
                     </div>
                     <div class="use-cases">
-                        <h4>Transform Your Operations:</h4>
+                        <h4>Beyond Simple Predictions:</h4>
                         <ul>
-                            <li><strong>Prevent Catastrophic Failures:</strong> Detect equipment anomalies 72 hours before failure</li>
-                            <li><strong>Optimize Production:</strong> Improve yield with advanced reservoir modeling</li>
-                            <li><strong>Ensure Safety:</strong> Real-time pipeline integrity monitoring</li>
-                            <li><strong>Reduce Downtime:</strong> Predictive maintenance across all assets</li>
+                            <li><strong>Multi-variate Time Series:</strong> Complex patterns across multiple variables</li>
+                            <li><strong>Irregular Intervals:</strong> Handle missing data and uneven sampling</li>
+                            <li><strong>Seasonal Decomposition:</strong> Automatically detect and model seasonality</li>
+                            <li><strong>External Factors:</strong> Incorporate weather, events, and other influences</li>
                         </ul>
                     </div>
                     <div class="industry-result">
-                        <span class="result-metric">Potential to</span> reduce downtime and operational costs
+                        <span class="result-metric">LSTM, ARIMA, Prophet,</span> and custom ensemble models
                     </div>
                 </div>
 
                 <div class="industry-card">
                     <div class="industry-header">
-                        <span class="industry-icon"><i class="fas fa-industry"></i></span>
-                        <h3>Manufacturing</h3>
+                        <span class="industry-icon"><i class="fas fa-search"></i></span>
+                        <h3>Anomaly Detection</h3>
                     </div>
                     <div class="use-cases">
-                        <h4>Revolutionize Your Factory Floor:</h4>
+                        <h4>Find What Doesn't Belong:</h4>
                         <ul>
-                            <li><strong>Zero Unplanned Downtime:</strong> Predict machine failures before they happen</li>
-                            <li><strong>Perfect Quality:</strong> Catch defects in real-time with vision ML</li>
-                            <li><strong>Just-in-Time Excellence:</strong> Optimize inventory with demand forecasting</li>
-                            <li><strong>Energy Efficiency:</strong> Optimize consumption with smart scheduling</li>
+                            <li><strong>Unsupervised Learning:</strong> Detect patterns without labeled examples</li>
+                            <li><strong>Real-time Monitoring:</strong> Continuous anomaly scoring and alerting</li>
+                            <li><strong>Multi-dimensional:</strong> Complex feature spaces and interactions</li>
+                            <li><strong>Adaptive Thresholds:</strong> Dynamic sensitivity based on context</li>
                         </ul>
                     </div>
                     <div class="industry-result">
-                        <span class="result-metric">Designed to</span> improve efficiency and reduce costs
+                        <span class="result-metric">Isolation Forest, AutoEncoders,</span> One-Class SVM
                     </div>
                 </div>
 
                 <div class="industry-card">
                     <div class="industry-header">
-                        <span class="industry-icon"><i class="fas fa-credit-card"></i></span>
-                        <h3>Fintech</h3>
+                        <span class="industry-icon"><i class="fas fa-eye"></i></span>
+                        <h3>Computer Vision</h3>
                     </div>
                     <div class="use-cases">
-                        <h4>Stay Ahead of Financial Risk:</h4>
+                        <h4>See What Matters:</h4>
                         <ul>
-                            <li><strong>Stop Fraud Instantly:</strong> Detect and block suspicious transactions quickly</li>
-                            <li><strong>Smarter Lending:</strong> Improve risk assessment with advanced models</li>
-                            <li><strong>Market Edge:</strong> Deploy trading strategies in minutes, not months</li>
-                            <li><strong>Customer Intelligence:</strong> Predict churn before it happens</li>
+                            <li><strong>Object Detection:</strong> Identify and locate items in images</li>
+                            <li><strong>Classification:</strong> Categorize images with high accuracy</li>
+                            <li><strong>Segmentation:</strong> Pixel-level analysis and masking</li>
+                            <li><strong>Custom Datasets:</strong> Train on your specific domain images</li>
                         </ul>
                     </div>
                     <div class="industry-result">
-                        <span class="result-metric">Built to</span> enhance fraud detection capabilities
+                        <span class="result-metric">YOLO, ResNet, Custom CNNs,</span> and transfer learning
                     </div>
                 </div>
 
                 <div class="industry-card">
                     <div class="industry-header">
-                        <span class="industry-icon"><i class="fas fa-hospital"></i></span>
-                        <h3>Healthcare</h3>
+                        <span class="industry-icon"><i class="fas fa-layer-group"></i></span>
+                        <h3>Classification & Regression</h3>
                     </div>
                     <div class="use-cases">
-                        <h4>Better Patient Outcomes at Scale:</h4>
+                        <h4>Core ML Fundamentals:</h4>
                         <ul>
-                            <li><strong>Save Lives:</strong> Identify high-risk patients 48 hours earlier</li>
-                            <li><strong>Personalized Care:</strong> Match treatments to patient profiles</li>
-                            <li><strong>Operational Excellence:</strong> Enhance bed utilization and resource management</li>
-                            <li><strong>Proactive Monitoring:</strong> Detect device anomalies before critical failures</li>
+                            <li><strong>Feature Engineering:</strong> Automatic creation and selection</li>
+                            <li><strong>Ensemble Methods:</strong> Combine multiple models for better performance</li>
+                            <li><strong>Imbalanced Data:</strong> Handle skewed datasets effectively</li>
+                            <li><strong>Interpretability:</strong> Understand model decisions and feature importance</li>
                         </ul>
                     </div>
                     <div class="industry-result">
-                        <span class="result-metric">Aims to</span> improve patient outcomes and care quality
+                        <span class="result-metric">XGBoost, Random Forest,</span> Neural Networks
                     </div>
                 </div>
 
                 <div class="industry-card">
                     <div class="industry-header">
-                        <span class="industry-icon"><i class="fas fa-wifi"></i></span>
-                        <h3>IoT & Smart Cities</h3>
+                        <span class="industry-icon"><i class="fas fa-language"></i></span>
+                        <h3>Natural Language Processing</h3>
                     </div>
                     <div class="use-cases">
-                        <h4>Intelligence at the Edge:</h4>
+                        <h4>Understand Text at Scale:</h4>
                         <ul>
-                            <li><strong>Massive Scale:</strong> Process millions of sensor streams in real-time</li>
-                            <li><strong>Smart Infrastructure:</strong> Help reduce traffic congestion with intelligent systems</li>
-                            <li><strong>Grid Optimization:</strong> Balance energy loads automatically</li>
-                            <li><strong>Environmental Safety:</strong> Detect hazards before they spread</li>
+                            <li><strong>Sentiment Analysis:</strong> Extract emotion and opinion from text</li>
+                            <li><strong>Named Entity Recognition:</strong> Identify people, places, organizations</li>
+                            <li><strong>Text Classification:</strong> Categorize documents and messages</li>
+                            <li><strong>Custom Embeddings:</strong> Domain-specific text representations</li>
                         </ul>
                     </div>
                     <div class="industry-result">
-                        <span class="result-metric">Capable of</span> processing high-volume sensor data
+                        <span class="result-metric">BERT, Transformers,</span> custom language models
                     </div>
                 </div>
 
                 <div class="industry-card">
                     <div class="industry-header">
-                        <span class="industry-icon"><i class="fas fa-truck"></i></span>
-                        <h3>Logistics & Supply Chain</h3>
+                        <span class="industry-icon"><i class="fas fa-database"></i></span>
+                        <h3>Any Data Source</h3>
                     </div>
                     <div class="use-cases">
-                        <h4>Deliver Excellence Every Time:</h4>
+                        <h4>Connect to Everything:</h4>
                         <ul>
-                            <li><strong>Perfect Routes:</strong> Optimize routes to reduce fuel consumption</li>
-                            <li><strong>Stock Smart:</strong> Never run out, never overstock</li>
-                            <li><strong>Warehouse AI:</strong> Accelerate pick-and-pack operations</li>
-                            <li><strong>Fleet Health:</strong> Zero breakdowns with predictive maintenance</li>
+                            <li><strong>Structured Data:</strong> SQL databases, CSV files, APIs</li>
+                            <li><strong>Unstructured Data:</strong> Images, text, audio, video</li>
+                            <li><strong>Streaming Data:</strong> Real-time feeds and event streams</li>
+                            <li><strong>Mixed Formats:</strong> Combine different data types seamlessly</li>
                         </ul>
                     </div>
                     <div class="industry-result">
-                        <span class="result-metric">Designed to</span> optimize delivery performance
+                        <span class="result-metric">No preprocessing required</span> - agents handle data cleaning
                     </div>
+                </div>
+            </div>
+
+            <!-- Comparison callout -->
+            <div class="enterprise-note" style="margin-top: 4rem;">
+                <div class="note-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="note-content">
+                    <h4>Why This Matters</h4>
+                    <p>Traditional AutoML platforms force your data into their rigid templates. ProspectML's AI agents adapt to your specific data, domain, and requirements - building custom solutions that actually fit your needs.</p>
                 </div>
             </div>
         </div>
@@ -478,14 +564,41 @@ prospectml run <span class="code-string">"Predict equipment failures 72 hours in
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container" style="text-align: center;">
-            <h2>Deploy an Army of AI Agents to Build Your ML</h2>
-            <p style="margin-bottom: 2rem;">One prompt. Unlimited agents. Production-ready models in hours.</p>
-            <div class="cta-buttons" style="justify-content: center; gap: 1rem; margin-bottom: 2rem;">
-                <a href="pricing-enterprise.html#purchase" class="btn-primary">Start Free Trial</a>
-                <a href="#" class="btn-secondary">Schedule Demo</a>
+        <div class="cta-background">
+            <div class="cta-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Deploy an Army of AI Agents to Build Your ML</h2>
+                <p>One prompt. Unlimited agents. Production-ready models in hours.</p>
+                <div class="cta-buttons">
+                    <a href="pricing-enterprise.html#purchase" class="btn-cta-primary">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn-cta-secondary">
+                        <span>Schedule Demo</span>
+                        <i class="fas fa-calendar"></i>
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>30-day trial</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Your infrastructure</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No ML expertise needed</span>
+                    </div>
+                </div>
             </div>
-            <p class="cta-note">30-day trial • Your infrastructure • No ML expertise needed</p>
         </div>
     </section>
 
@@ -539,5 +652,48 @@ prospectml run <span class="code-string">"Predict equipment failures 72 hours in
             </div>
         </div>
     </footer>
+
+    <script>
+        // Simplified script without animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Copy button functionality
+            document.querySelector('.copy-button')?.addEventListener('click', function() {
+                const code = document.querySelector('.code-block-content code').textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    this.textContent = 'Copied!';
+                    setTimeout(() => {
+                        this.textContent = 'Copy Commands';
+                    }, 2000);
+                });
+            });
+
+            // FAQ toggle animations
+            document.querySelectorAll('.faq-details')?.forEach(details => {
+                details.addEventListener('toggle', function() {
+                    const icon = this.querySelector('.fa-chevron-down');
+                    if (icon) {
+                        if (this.open) {
+                            icon.style.transform = 'rotate(180deg)';
+                        } else {
+                            icon.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

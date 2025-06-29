@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="css/enterprise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="enterprise-body">
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -21,157 +28,296 @@
             </div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="index.html#features" class="nav-link">Features</a>
-                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
-                <a href="#purchase" class="btn-nav-cta">Get Started</a>
+                <a href="index.html#industries" class="nav-link">Use Cases</a>
+                <a href="index.html#deployment" class="nav-link">Deployment</a>
+                <a href="#purchase" class="btn-nav-cta">
+                    <span>Get Started</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Pricing Hero -->
-    <section class="hero" style="padding-bottom: 2rem;">
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-icon"><i class="fas fa-chart-line"></i></span>
+                    TRANSPARENT PRICING
+                </div>
                 <h1 class="hero-title">
-                    Enterprise Pricing for AI Development
+                    <span class="gradient-text">Enterprise Pricing</span><br>
+                    for AI Development</span>
                 </h1>
                 <p class="hero-description">
                     Accelerate your development team with AI agents. Clear pricing, immediate ROI.
                 </p>
+                <div class="hero-trust">
+                    <span class="trust-text">14-day free trial • No credit card required</span>
+                    <div class="trust-indicators">
+                        <span class="trust-dot"></span>
+                        <span class="trust-dot"></span>
+                        <span class="trust-dot"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Cards -->
-    <section class="industries-section">
+    <section class="value-prop">
         <div class="container">
-            <div class="roi-calculator" style="max-width: 1200px; grid-template-columns: repeat(3, 1fr);">
+            <div class="pricing-grid">
                 <!-- Starter -->
-                <div class="calculator-inputs" style="background: white; border-radius: 16px; padding: 2.5rem;">
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--enterprise-dark);">Starter</h3>
-                    <div class="stat-value" style="font-size: 3rem; margin-bottom: 0.5rem;">
-                        $1,000<span style="font-size: 1.25rem; font-weight: 400;">/month</span>
-                    </div>
-                    <p style="color: var(--enterprise-gray); margin-bottom: 2rem;">Annual billing • Perfect for small teams</p>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Single Kubernetes cluster</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Up to 5 concurrent AI agents</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Community support</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> 14-day free trial</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Basic usage analytics</div>
-                    </div>
-                    
-                    <div style="padding: 1rem; background: var(--enterprise-light-beige); border-radius: 8px; margin-bottom: 1.5rem;">
-                        <p style="text-align: center; font-weight: 600; color: var(--enterprise-dark);">$12,000/year</p>
+                <div class="pricing-card starter-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">1,000</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-billing">Annual billing • Perfect for small teams</p>
                     </div>
                     
-                    <a href="#purchase" class="btn-secondary" style="width: 100%; text-align: center;">Start Trial</a>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Single Kubernetes cluster</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Up to 5 concurrent AI agents</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Community support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Basic usage analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-total">
+                        <span class="total-label">Annual Total:</span>
+                        <span class="total-amount">$12,000</span>
+                    </div>
+                    
+                    <a href="#purchase" class="plan-cta btn-secondary">
+                        <span>Start Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
                 <!-- Professional -->
-                <div class="calculator-results" style="border: 3px solid var(--enterprise-primary); position: relative;">
-                    <div class="hero-tag" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--enterprise-primary);">RECOMMENDED</div>
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; margin-top: 1rem;">Professional</h3>
-                    <div class="stat-value" style="font-size: 3rem; margin-bottom: 0.5rem; color: var(--enterprise-primary);">
-                        $3,000<span style="font-size: 1.25rem; font-weight: 400;">/month</span>
+                <div class="pricing-card professional-card featured">
+                    <div class="featured-badge">
+                        <span>RECOMMENDED</span>
                     </div>
-                    <p style="color: var(--enterprise-gray); margin-bottom: 2rem;">Annual billing • Most popular choice</p>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <div class="result-item" style="justify-content: flex-start; border: none; padding: 0.5rem 0;">
-                            <span style="margin-right: 0.5rem;"><i class="fas fa-check"></i></span> Single Kubernetes cluster
+                    <div class="pricing-header">
+                        <div class="plan-icon featured-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
-                        <div class="result-item" style="justify-content: flex-start; border: none; padding: 0.5rem 0;">
-                            <span style="margin-right: 0.5rem;"><i class="fas fa-check"></i></span> Unlimited concurrent AI agents
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">3,000</span>
+                            <span class="period">/month</span>
                         </div>
-                        <div class="result-item" style="justify-content: flex-start; border: none; padding: 0.5rem 0;">
-                            <span style="margin-right: 0.5rem;"><i class="fas fa-check"></i></span> Priority support (48hr SLA)
-                        </div>
-                        <div class="result-item" style="justify-content: flex-start; border: none; padding: 0.5rem 0;">
-                            <span style="margin-right: 0.5rem;"><i class="fas fa-check"></i></span> Advanced analytics & reporting
-                        </div>
-                        <div class="result-item" style="justify-content: flex-start; border: none; padding: 0.5rem 0;">
-                            <span style="margin-right: 0.5rem;"><i class="fas fa-check"></i></span> API access
-                        </div>
-                        <div class="result-item" style="justify-content: flex-start; border: none; padding: 0.5rem 0;">
-                            <span style="margin-right: 0.5rem;"><i class="fas fa-check"></i></span> Quarterly business reviews
-                        </div>
+                        <p class="plan-billing">Annual billing • Most popular choice</p>
                     </div>
                     
-                    <div class="result-item highlight" style="text-align: center; margin-bottom: 1.5rem;">
-                        <span style="text-align: center; font-weight: 600; color: var(--enterprise-dark);">$36,000/year</span>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Single Kubernetes cluster</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Unlimited concurrent AI agents</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Priority support (48hr SLA)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Advanced analytics & reporting</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>API access</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quarterly business reviews</span>
+                        </div>
                     </div>
                     
-                    <a href="#purchase" class="btn-primary" style="width: 100%; text-align: center; font-size: 1.125rem;">Get Started</a>
+                    <div class="plan-total featured-total">
+                        <span class="total-label">Annual Total:</span>
+                        <span class="total-amount">$36,000</span>
+                    </div>
+                    
+                    <a href="#purchase" class="plan-cta btn-primary featured-cta">
+                        <span>Get Started</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
                 </div>
 
                 <!-- Enterprise -->
-                <div class="calculator-inputs" style="background: white; border-radius: 16px; padding: 2.5rem;">
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--enterprise-dark);">Enterprise</h3>
-                    <div class="stat-value" style="font-size: 3rem; margin-bottom: 0.5rem;">Custom</div>
-                    <p style="color: var(--enterprise-gray); margin-bottom: 2rem;">Tailored to your needs</p>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Multiple clusters</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Unlimited everything</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Dedicated support engineer</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> SSO/SAML integration</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Air-gapped deployment</div>
-                        <div class="industry-badge" style="margin-bottom: 0.75rem; display: block; text-align: left;"><i class="fas fa-check"></i> Custom contract terms</div>
+                <div class="pricing-card enterprise-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="amount">Custom</span>
+                        </div>
+                        <p class="plan-billing">Tailored to your needs</p>
                     </div>
                     
-                    <div style="padding: 1rem; background: var(--enterprise-light-beige); border-radius: 8px; margin-bottom: 1.5rem;">
-                        <p style="text-align: center; font-weight: 600; color: var(--enterprise-dark);">Starting at $72,000/year</p>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Multiple clusters</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Unlimited everything</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Dedicated support engineer</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SSO/SAML integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Air-gapped deployment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Custom contract terms</span>
+                        </div>
                     </div>
                     
-                    <a href="mailto:info@prospectml.com" class="btn-primary" style="width: 100%; text-align: center;">Contact Sales</a>
+                    <div class="plan-total">
+                        <span class="total-label">Starting at:</span>
+                        <span class="total-amount">$72,000/year</span>
+                    </div>
+                    
+                    <a href="mailto:info@prospectml.com" class="plan-cta btn-primary">
+                        <span>Contact Sales</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Enterprise -->
-            <div class="support-promise" style="margin-top: 3rem; background: var(--enterprise-light-beige);">
-                <h3>Enterprise & Multi-Cluster</h3>
-                <p>Need licenses for multiple clusters, air-gapped deployment, or custom terms?</p>
-                <a href="mailto:info@prospectml.com" class="btn-primary">Contact Sales</a>
+            <!-- Enterprise Note -->
+            <div class="enterprise-note">
+                <div class="note-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="note-content">
+                    <h4>Enterprise & Multi-Cluster</h4>
+                    <p>Need licenses for multiple clusters, air-gapped deployment, or custom terms?</p>
+                    <a href="mailto:info@prospectml.com" class="btn-secondary">
+                        <span>Contact Sales</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- What's Included -->
-    <section class="value-prop">
+    <section class="industries-section">
         <div class="container">
-            <h2 class="section-title">What's Included</h2>
-            <p class="section-subtitle">Every license includes everything you need</p>
+            <div class="section-header">
+                <h2 class="section-title">What's Included</h2>
+                <p class="section-subtitle">Every license includes everything you need</p>
+            </div>
             
             <div class="value-grid">
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-robot"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-robot"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">01</div>
+                    </div>
                     <h3>Unlimited AI Agents</h3>
                     <p>Run as many concurrent AI coding agents as your cluster can handle</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-users"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">02</div>
+                    </div>
                     <h3>Unlimited Users</h3>
                     <p>No per-seat pricing. Add your entire team at no extra cost</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-sync-alt"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">03</div>
+                    </div>
                     <h3>Free Updates</h3>
                     <p>All updates and new features included during your license period</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-book"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-book"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">04</div>
+                    </div>
                     <h3>Documentation</h3>
                     <p>Comprehensive docs, tutorials, and example implementations</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-life-ring"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-life-ring"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">05</div>
+                    </div>
                     <h3>Support</h3>
                     <p>Email support with guaranteed response times based on plan</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="value-card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="card-number">06</div>
+                    </div>
                     <h3>Security Updates</h3>
                     <p>Critical security patches and vulnerability fixes</p>
                 </div>
@@ -180,68 +326,124 @@
     </section>
 
     <!-- Purchase Section -->
-    <section id="purchase" class="implementation">
+    <section id="purchase" class="security-section">
         <div class="container">
-            <h2 class="section-title">Ready to Get Started?</h2>
-            <p class="section-subtitle">Choose how you'd like to proceed</p>
+            <div class="section-header">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="section-subtitle">Choose how you'd like to proceed</p>
+            </div>
             
-            <div class="roi-calculator" style="grid-template-columns: 1fr 1fr; max-width: 1200px; margin: 0 auto;">
+            <div class="purchase-container">
                 <!-- Start Trial -->
-                <div id="trial" class="calculator-inputs">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--enterprise-dark);">Start Your Free Trial</h3>
-                    <p style="margin-bottom: 1.5rem;">No credit card required. Full access for 14 days.</p>
-                    <ol style="margin-bottom: 1.5rem; padding-left: 1.5rem;">
-                        <li style="margin-bottom: 0.5rem;">Install ProspectML on your cluster</li>
-                        <li style="margin-bottom: 0.5rem;">Trial starts automatically</li>
-                        <li style="margin-bottom: 0.5rem;">Purchase a license when ready</li>
-                    </ol>
-                    <div style="background: var(--enterprise-dark); color: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.875rem; margin-bottom: 0.5rem; opacity: 0.8;">Quick Install:</p>
-                        <pre style="margin: 0; font-size: 0.875rem;"><code>helm repo add prospectml https://charts.prospectml.com
-helm install prospectml prospectml/prospectml \
-  --set aiProvider.anthropic.apiKey=YOUR_API_KEY</code></pre>
+                <div class="purchase-option trial-option">
+                    <div class="option-header">
+                        <div class="option-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h3>Start Your Free Trial</h3>
+                        <p>No credit card required. Full access for 14 days.</p>
                     </div>
-                    <p style="font-size: 0.875rem; color: var(--enterprise-gray);">
-                        <strong>Note:</strong> You'll need an Anthropic API key. Get one at 
-                        <a href="https://console.anthropic.com" target="__blank" style="color: var(--enterprise-primary);">console.anthropic.com</a>
-                    </p>
-                </div>
-
-                <!-- Purchase License -->
-                <div class="calculator-results" style="border: 3px solid var(--enterprise-primary);">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Purchase a License</h3>
-                    <p style="margin-bottom: 1.5rem;">Get your license key within 24 hours via email.</p>
                     
-                    <div style="margin-bottom: 2rem;">
-                        <h4 style="font-size: 1.125rem; margin-bottom: 1rem;">Choose Your Payment Method:</h4>
-                        <div style="display: grid; gap: 1rem;">
-                            <a href="https://buy.stripe.com/6oU14ncVk7hNcpOga66sw01" class="btn-primary" style="text-decoration: none; text-align: center; padding: 1.5rem; display: block; border-radius: 12px; font-size: 1.125rem;">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-credit-card"></i></div>
-                                <span style="font-weight: 700; display: block; margin-bottom: 0.25rem;">Purchase Starter Plan</span>
-                                <small style="opacity: 0.9; font-size: 0.875rem;">$1,000/month via Stripe</small>
-                                <div style="margin-top: 0.5rem; font-size: 0.875rem; text-decoration: underline;">Click to Buy Now →</div>
-                            </a>
-                            <a href="https://buy.stripe.com/8x2dR9cVk0Tp9dC4ro6sw00" class="btn-primary" style="text-decoration: none; text-align: center; padding: 1.5rem; display: block; border-radius: 12px; font-size: 1.125rem; background: var(--enterprise-accent); border: 2px solid var(--enterprise-accent);" onmouseover="this.style.background='var(--enterprise-accent-hover, #E86E48)'; this.style.borderColor='var(--enterprise-accent-hover, #E86E48)';" onmouseout="this.style.background='var(--enterprise-accent)'; this.style.borderColor='var(--enterprise-accent)';">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-credit-card"></i></div>
-                                <span style="font-weight: 700; display: block; margin-bottom: 0.25rem;">Purchase Professional Plan</span>
-                                <small style="opacity: 0.9; font-size: 0.875rem;">$3,000/month via Stripe</small>
-                                <div style="margin-top: 0.5rem; font-size: 0.875rem; text-decoration: underline;">Click to Buy Now →</div>
-                            </a>
-                            <a href="mailto:info@prospectml.com?subject=Wire%20Transfer%20Request" class="btn-secondary" style="text-decoration: none; text-align: center; padding: 1.5rem; display: block; border-radius: 12px; font-size: 1.125rem;">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-university"></i></div>
-                                <span style="font-weight: 700; display: block; margin-bottom: 0.25rem;">Request Wire Transfer</span>
-                                <small style="opacity: 0.9; font-size: 0.875rem;">NET 30 Terms</small>
-                                <div style="margin-top: 0.5rem; font-size: 0.875rem; text-decoration: underline;">Click to Contact Sales →</div>
-                            </a>
+                    <div class="option-steps">
+                        <div class="step-item">
+                            <span class="step-number">1</span>
+                            <span>Install ProspectML on your cluster</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">2</span>
+                            <span>Trial starts automatically</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">3</span>
+                            <span>Purchase a license when ready</span>
                         </div>
                     </div>
                     
-                    <div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.75rem;">How it works:</h4>
-                        <ol style="padding-left: 1.5rem; color: var(--enterprise-gray); font-size: 0.875rem;">
-                            <li style="margin-bottom: 0.5rem;">Complete payment via your preferred method</li>
-                            <li style="margin-bottom: 0.5rem;">Receive license key via email within 24 hours</li>
-                            <li style="margin-bottom: 0.5rem;">Add license key to your Helm values</li>
+                    <div class="code-block-container">
+                        <div class="code-block-header">
+                            <div class="terminal-dots">
+                                <div class="terminal-dot red"></div>
+                                <div class="terminal-dot yellow"></div>
+                                <div class="terminal-dot green"></div>
+                            </div>
+                            <div class="code-block-title">Quick Install</div>
+                            <button class="copy-button">Copy</button>
+                        </div>
+                        <div class="code-block-content">
+                            <pre><code><span class="code-comment"># Add ProspectML helm repository</span>
+helm repo add prospectml https://charts.prospectml.com
+
+<span class="code-comment"># Install with your API key</span>
+helm install prospectml prospectml/prospectml \
+  --set aiProvider.anthropic.apiKey=<span class="code-string">YOUR_API_KEY</span></code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="option-note">
+                        <p><strong>Note:</strong> You'll need an Anthropic API key. Get one at 
+                        <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Purchase License -->
+                <div class="purchase-option license-option">
+                    <div class="option-header">
+                        <div class="option-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Purchase a License</h3>
+                        <p>Get your license key within 24 hours via email.</p>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h4>Choose Your Payment Method:</h4>
+                        
+                        <a href="https://buy.stripe.com/6oU14ncVk7hNcpOga66sw01" class="payment-option starter-payment">
+                            <div class="payment-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="payment-content">
+                                <span class="payment-title">Purchase Starter Plan</span>
+                                <span class="payment-price">$1,000/month via Stripe</span>
+                            </div>
+                            <div class="payment-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://buy.stripe.com/8x2dR9cVk0Tp9dC4ro6sw00" class="payment-option professional-payment featured-payment">
+                            <div class="payment-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="payment-content">
+                                <span class="payment-title">Purchase Professional Plan</span>
+                                <span class="payment-price">$3,000/month via Stripe</span>
+                            </div>
+                            <div class="payment-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:info@prospectml.com?subject=Wire%20Transfer%20Request" class="payment-option wire-payment">
+                            <div class="payment-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="payment-content">
+                                <span class="payment-title">Request Wire Transfer</span>
+                                <span class="payment-price">NET 30 Terms</span>
+                            </div>
+                            <div class="payment-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="purchase-steps">
+                        <h4>How it works:</h4>
+                        <ol class="steps-list">
+                            <li>Complete payment via your preferred method</li>
+                            <li>Receive license key via email within 24 hours</li>
+                            <li>Add license key to your Helm values</li>
                             <li>Enjoy unlimited AI-powered development!</li>
                         </ol>
                     </div>
@@ -249,63 +451,103 @@ helm install prospectml prospectml/prospectml \
             </div>
 
             <!-- Contact -->
-            <div class="support-promise" style="margin-top: 3rem;">
-                <h3>Questions about licensing?</h3>
-                <p>Our team is happy to help you choose the right option.</p>
-                <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                    <a href="mailto:info@prospectml.com" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--enterprise-primary); font-weight: 600;">
-                        <span style="font-size: 1.5rem;"><i class="fas fa-envelope"></i></span>
-                        <span>info@prospectml.com</span>
-                    </a>
-                    <a href="https://calendly.com/matt-algorithmicresearchgroup/prospectml-product-demo" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--enterprise-primary); font-weight: 600;">
-                        <span style="font-size: 1.5rem;"><i class="fas fa-calendar-alt"></i></span>
-                        <span>Schedule a Demo</span>
-                    </a>
+            <div class="contact-section">
+                <div class="contact-content">
+                    <h3>Questions about licensing?</h3>
+                    <p>Our team is happy to help you choose the right option.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:info@prospectml.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@prospectml.com</span>
+                        </a>
+                        <a href="https://calendly.com/matt-algorithmicresearchgroup/prospectml-product-demo" class="contact-method">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Schedule a Demo</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="industries-section">
+    <section class="value-prop">
         <div class="container">
-            <h2 class="section-title">Pricing FAQ</h2>
+            <div class="section-header">
+                <h2 class="section-title">Pricing FAQ</h2>
+                <p class="section-subtitle">Common questions about our pricing</p>
+            </div>
             
-            <div class="industry-cards">
-                <div class="industry-card">
-                    <details>
-                        <summary style="font-weight: 600; font-size: 1.125rem; cursor: pointer; padding: 0.5rem 0;">What happens after my trial expires?</summary>
-                        <p style="margin-top: 1rem;">ProspectML will stop accepting new jobs but existing work will complete. Your data remains accessible. Simply add a license key to continue.</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <details class="faq-details">
+                        <summary class="faq-question">
+                            <span>What happens after my trial expires?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>ProspectML will stop accepting new jobs but existing work will complete. Your data remains accessible. Simply add a license key to continue.</p>
+                        </div>
                     </details>
                 </div>
-                <div class="industry-card">
-                    <details>
-                        <summary style="font-weight: 600; font-size: 1.125rem; cursor: pointer; padding: 0.5rem 0;">Can I switch between monthly and annual?</summary>
-                        <p style="margin-top: 1rem;">Yes! Contact us to switch plans. We'll prorate any unused time.</p>
+                
+                <div class="faq-item">
+                    <details class="faq-details">
+                        <summary class="faq-question">
+                            <span>Can I switch between monthly and annual?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes! Contact us to switch plans. We'll prorate any unused time.</p>
+                        </div>
                     </details>
                 </div>
-                <div class="industry-card">
-                    <details>
-                        <summary style="font-weight: 600; font-size: 1.125rem; cursor: pointer; padding: 0.5rem 0;">Do you offer volume discounts?</summary>
-                        <p style="margin-top: 1rem;">Yes, we offer discounts for 5+ clusters. Contact sales for custom pricing.</p>
+                
+                <div class="faq-item">
+                    <details class="faq-details">
+                        <summary class="faq-question">
+                            <span>Do you offer volume discounts?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, we offer discounts for 5+ clusters. Contact sales for custom pricing.</p>
+                        </div>
                     </details>
                 </div>
-                <div class="industry-card">
-                    <details>
-                        <summary style="font-weight: 600; font-size: 1.125rem; cursor: pointer; padding: 0.5rem 0;">What payment methods do you accept?</summary>
-                        <p style="margin-top: 1rem;">Credit cards via Stripe, wire transfers, and purchase orders for established companies.</p>
+                
+                <div class="faq-item">
+                    <details class="faq-details">
+                        <summary class="faq-question">
+                            <span>What payment methods do you accept?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Credit cards via Stripe, wire transfers, and purchase orders for established companies.</p>
+                        </div>
                     </details>
                 </div>
-                <div class="industry-card">
-                    <details>
-                        <summary style="font-weight: 600; font-size: 1.125rem; cursor: pointer; padding: 0.5rem 0;">Can I get a refund?</summary>
-                        <p style="margin-top: 1rem;">We offer a 30-day money-back guarantee if ProspectML doesn't meet your needs.</p>
+                
+                <div class="faq-item">
+                    <details class="faq-details">
+                        <summary class="faq-question">
+                            <span>Can I get a refund?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day money-back guarantee if ProspectML doesn't meet your needs.</p>
+                        </div>
                     </details>
                 </div>
-                <div class="industry-card">
-                    <details>
-                        <summary style="font-weight: 600; font-size: 1.125rem; cursor: pointer; padding: 0.5rem 0;">Is the license per cluster or per company?</summary>
-                        <p style="margin-top: 1rem;">Licenses are per Kubernetes cluster. Each cluster needs its own license.</p>
+                
+                <div class="faq-item">
+                    <details class="faq-details">
+                        <summary class="faq-question">
+                            <span>Is the license per cluster or per company?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Licenses are per Kubernetes cluster. Each cluster needs its own license.</p>
+                        </div>
                     </details>
                 </div>
             </div>
@@ -315,14 +557,72 @@ helm install prospectml prospectml/prospectml \
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content" style="text-align: center; padding: 2rem 0;">
-                <div class="footer-brand" style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
-                    <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
-                    <span style="font-size: 1.5rem; font-weight: 600;">ProspectML</span>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/arg-mark.svg" alt="ProspectML Logo" class="footer-logo">
+                    <span>ProspectML</span>
                 </div>
                 <p class="footer-copyright">© 2025 Algorithmic Research Group. All rights reserved. | <span style="color: #999;">Privacy Policy</span> | <span style="color: #999;">Terms of Service</span></p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and sections
+            document.querySelectorAll('.pricing-card, .value-card, .faq-item').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Copy button functionality
+            document.querySelector('.copy-button')?.addEventListener('click', function() {
+                const code = document.querySelector('.code-block-content code').textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    this.textContent = 'Copied!';
+                    setTimeout(() => {
+                        this.textContent = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // FAQ toggle animations
+            document.querySelectorAll('.faq-details').forEach(details => {
+                details.addEventListener('toggle', function() {
+                    const icon = this.querySelector('.fa-chevron-down');
+                    if (this.open) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

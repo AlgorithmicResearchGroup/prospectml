@@ -371,11 +371,8 @@
                         </div>
                         <div class="code-block-content">
                             <pre><code><span class="code-comment"># Add ProspectML helm repository</span>
-helm repo add prospectml https://charts.prospectml.com
-
-<span class="code-comment"># Install with your API key</span>
-helm install prospectml prospectml/prospectml \
-  --set aiProvider.anthropic.apiKey=<span class="code-string">YOUR_API_KEY</span></code></pre>
+curl -sSL prospectml.com/install.sh | bash
+</code></pre>
                         </div>
                     </div>
                     

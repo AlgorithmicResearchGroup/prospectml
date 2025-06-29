@@ -494,19 +494,25 @@
                         <button class="copy-button">Copy Commands</button>
                     </div>
                     <div class="code-block-content">
-                        <pre><code><span class="code-comment"># Add ProspectML helm repository</span>
-helm repo add prospectml https://charts.prospectml.com
+                        <pre>
+                            <code>
+                            
+<span class="code-comment"># Export your LLM provider API key (Anthropic, OpenAI, VLLM, etc.)</span>
+export ANTHROPIC_API_KEY=sk-ant-your-key-here
+                            
+<span class="code-comment"># Use our easy install script to install ProspectML</span>
+curl -sSL prospectml.com/install.sh | bash
 
-<span class="code-comment"># Install ProspectML with your Anthropic API key</span>
-helm install prospectml prospectml/prospectml \
-  --set aiProvider.anthropic.apiKey=<span class="code-string">YOUR_API_KEY</span>
 
 <span class="code-comment"># Submit your first ML task</span>
-prospectml run <span class="code-string">"Predict equipment failures 72 hours in advance using \
-  vibration sensors, maintenance logs, and weather data"</span>
+prospectml run <span class="code-string">"Predict equipment failures 72 hours in advance using vibration sensors, maintenance logs, and weather data"</span>
+vibration sensors, maintenance logs, and weather data"</span>
 
 <span class="code-comment"># Output: Deploying 47 specialized agents...</span>
-<span class="code-comment"># Output: Model deployment complete - optimized for your requirements</span></code></pre>
+<span class="code-comment"># Output: Model deployment complete - optimized for your requirements</span>
+
+                            </code>
+                        </pre>
                     </div>
                 </div>
             </div>

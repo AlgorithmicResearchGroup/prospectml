@@ -24,7 +24,7 @@ The simplest way to get ProspectML running is with our universal installer scrip
 export ANTHROPIC_API_KEY=sk-ant-your-key-here
 
 # Install ProspectML (works on any Kubernetes cluster)
-curl -sSL https://raw.githubusercontent.com/AlgorithmicResearchGroup/prospectml/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/AlgorithmicResearchGroup/prospectml/master/install | bash
 ```
 
 **That's it!** The script will:

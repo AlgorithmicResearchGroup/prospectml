@@ -56,7 +56,12 @@
                 <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
                 <span class="brand-name">ProspectML</span>
             </div>
-            <div class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="#industries" class="nav-link">Use Cases</a>
                 <a href="#deployment" class="nav-link">Deployment</a>
                 <a href="pricing-enterprise.html" class="nav-link">Pricing</a>
@@ -691,6 +696,25 @@ vibration sensors, maintenance logs, and weather data"</span>
     <script>
         // Simplified script without animations
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking on a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+            
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {

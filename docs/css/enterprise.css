@@ -233,6 +233,41 @@ body.enterprise-body {
     transform: translateX(3px);
 }
 
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--enterprise-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active .hamburger:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -1678,8 +1713,48 @@ body.enterprise-body {
         max-width: 300px;
     }
     
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
     .nav-links {
         display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        gap: 1.5rem;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--enterprise-light-gray);
+    }
+    
+    .btn-nav-cta {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .security-section {
+        padding: 3rem 1rem;
+    }
+    
+    .security-section .container {
+        padding: 0;
     }
     
     .value-grid {
@@ -2442,13 +2517,68 @@ body.enterprise-body {
         grid-template-columns: 1fr;
     }
     
+    .purchase-option {
+        padding: 1.5rem;
+    }
+    
+    .option-steps {
+        padding: 0;
+    }
+    
+    .step-item {
+        font-size: 0.9rem;
+        padding: 0.75rem 0;
+    }
+    
+    .code-block-container {
+        margin: 1rem -1rem;
+        border-radius: 0;
+    }
+    
+    .code-block-content {
+        padding: 1rem;
+        font-size: 0.8rem;
+        overflow-x: auto;
+    }
+    
+    .code-block-content pre {
+        margin: 0;
+    }
+    
     .payment-option {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .payment-content {
+        width: 100%;
+    }
+    
+    .payment-title {
+        font-size: 0.95rem;
+    }
+    
+    .payment-price {
+        font-size: 0.85rem;
     }
     
     .payment-arrow {
         display: none;
+    }
+    
+    .contact-section {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-methods {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contact-method {
+        width: 100%;
+        justify-content: center;
     }
 }

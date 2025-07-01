@@ -19,7 +19,12 @@
                 <img src="images/arg-mark.svg" alt="ProspectML Logo" class="nav-logo">
                 <span class="nav-tag">Enterprise</span>
             </div>
-            <div class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="#roi-calculator" class="nav-link">ROI Calculator</a>
                 <a href="#industries" class="nav-link">Industries</a>
                 <a href="#security" class="nav-link">Security</a>
@@ -420,5 +425,27 @@ helm install prospectml prospectml/prospectml \
     </footer>
 
     <script src="js/roi-calculator.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking on a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
